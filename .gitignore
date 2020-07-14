@@ -1,0 +1,8 @@
+Jw.Winform.Ctrls/bin/**
+Jw.Winform.Ctrls/obj/**
+Jw.Winform.Ctrls.Test/**
+Jw.Winform.Ctrls.Test/**
+Jw.Share/**
+Jw.Share/**
+.vs/**
+*.cache
