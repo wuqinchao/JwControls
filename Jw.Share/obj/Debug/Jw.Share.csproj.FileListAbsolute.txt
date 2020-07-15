@@ -3,4 +3,3 @@ D:\GitHub\Jw\Jw.Share\bin\Debug\Jw.Share.pdb
 D:\GitHub\Jw\Jw.Share\obj\Debug\Jw.Share.csproj.CoreCompileInputs.cache
 D:\GitHub\Jw\Jw.Share\obj\Debug\Jw.Share.dll
 D:\GitHub\Jw\Jw.Share\obj\Debug\Jw.Share.pdb
-D:\GitHub\Jw\Jw.Share\obj\Debug\Jw.Share.csprojAssemblyReference.cache

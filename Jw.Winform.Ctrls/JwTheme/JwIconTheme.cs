@@ -7,13 +7,12 @@ using System.Threading.Tasks;
 
 namespace Jw.Winform.Ctrls
 {
-    public class JwTheme
+    public static class JwIconTheme
     {
-        public static Dictionary<ThemeType, JwThemeItem> ThemeDict = new Dictionary<ThemeType, JwThemeItem>();
-
-        static JwTheme()
+        public static Dictionary<ThemeType, JwIconThemeItem> ThemeDict = new Dictionary<ThemeType, JwIconThemeItem>();
+        static JwIconTheme()
         {
-            ThemeDict.Add(ThemeType.primary, new JwThemeItem()
+            ThemeDict.Add(ThemeType.primary, new JwIconThemeItem()
             {
                 BackColor = ColorTranslator.FromHtml("#007bff"),
                 ForeColor = ColorTranslator.FromHtml("#ffffff"),
@@ -25,7 +24,7 @@ namespace Jw.Winform.Ctrls
                 ForeDisableColor = ColorTranslator.FromHtml("#ffffff"),
                 BordDisableColor = ColorTranslator.FromHtml("#007bff")
             });
-            ThemeDict.Add(ThemeType.secondary, new JwThemeItem()
+            ThemeDict.Add(ThemeType.secondary, new JwIconThemeItem()
             {
                 BackColor = ColorTranslator.FromHtml("#6c757d"),
                 ForeColor = ColorTranslator.FromHtml("#ffffff"),
@@ -37,7 +36,7 @@ namespace Jw.Winform.Ctrls
                 ForeDisableColor = ColorTranslator.FromHtml("#ffffff"),
                 BordDisableColor = ColorTranslator.FromHtml("#6c757d")
             });
-            ThemeDict.Add(ThemeType.success, new JwThemeItem()
+            ThemeDict.Add(ThemeType.success, new JwIconThemeItem()
             {
                 BackColor = ColorTranslator.FromHtml("#28a745"),
                 ForeColor = ColorTranslator.FromHtml("#ffffff"),
@@ -49,7 +48,7 @@ namespace Jw.Winform.Ctrls
                 ForeDisableColor = ColorTranslator.FromHtml("#ffffff"),
                 BordDisableColor = ColorTranslator.FromHtml("#28a745")
             });
-            ThemeDict.Add(ThemeType.danger, new JwThemeItem()
+            ThemeDict.Add(ThemeType.danger, new JwIconThemeItem()
             {
                 BackColor = ColorTranslator.FromHtml("#dc3545"),
                 ForeColor = ColorTranslator.FromHtml("#ffffff"),
@@ -61,7 +60,7 @@ namespace Jw.Winform.Ctrls
                 ForeDisableColor = ColorTranslator.FromHtml("#ffffff"),
                 BordDisableColor = ColorTranslator.FromHtml("#dc3545")
             });
-            ThemeDict.Add(ThemeType.info, new JwThemeItem()
+            ThemeDict.Add(ThemeType.info, new JwIconThemeItem()
             {
                 BackColor = ColorTranslator.FromHtml("#17a2b8"),
                 ForeColor = ColorTranslator.FromHtml("#ffffff"),
@@ -73,7 +72,7 @@ namespace Jw.Winform.Ctrls
                 ForeDisableColor = ColorTranslator.FromHtml("#ffffff"),
                 BordDisableColor = ColorTranslator.FromHtml("#17a2b8")
             });
-            ThemeDict.Add(ThemeType.warning, new JwThemeItem()
+            ThemeDict.Add(ThemeType.warning, new JwIconThemeItem()
             {
                 BackColor = ColorTranslator.FromHtml("#ffc107"),
                 ForeColor = ColorTranslator.FromHtml("#212529"),
@@ -85,7 +84,7 @@ namespace Jw.Winform.Ctrls
                 ForeDisableColor = ColorTranslator.FromHtml("#212529"),
                 BordDisableColor = ColorTranslator.FromHtml("#ffc107")
             });
-            ThemeDict.Add(ThemeType.light, new JwThemeItem()
+            ThemeDict.Add(ThemeType.light, new JwIconThemeItem()
             {
                 BackColor = ColorTranslator.FromHtml("#f8f9fa"),
                 ForeColor = ColorTranslator.FromHtml("#212529"),
@@ -97,7 +96,7 @@ namespace Jw.Winform.Ctrls
                 ForeDisableColor = ColorTranslator.FromHtml("#212529"),
                 BordDisableColor = ColorTranslator.FromHtml("#f8f9fa")
             });
-            ThemeDict.Add(ThemeType.dark, new JwThemeItem()
+            ThemeDict.Add(ThemeType.dark, new JwIconThemeItem()
             {
                 BackColor = ColorTranslator.FromHtml("#343a40"),
                 ForeColor = ColorTranslator.FromHtml("#ffffff"),
@@ -111,20 +110,7 @@ namespace Jw.Winform.Ctrls
             });
         }
     }
-
-    public enum ThemeType
-    {
-        none,
-        primary,
-        secondary,
-        success,
-        danger,
-        warning,
-        info,
-        light,
-        dark,
-    }
-    public class JwThemeItem
+    public class JwIconThemeItem
     {
         public Color BackColor { get; set; }
         public Color ForeColor { get; set; }

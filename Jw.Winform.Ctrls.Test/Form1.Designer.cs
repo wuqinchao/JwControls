@@ -28,681 +28,698 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("节点0");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("节点0");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("节点4");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("节点5");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("节点0", new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode4});
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("节点2");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("节点3");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("节点1", new System.Windows.Forms.TreeNode[] {
-            treeNode6,
-            treeNode7});
-            this.label1 = new System.Windows.Forms.Label();
-            this.jwNavBar3 = new Jw.Winform.Ctrls.JwNavBar();
-            this.jwNavBar2 = new Jw.Winform.Ctrls.JwNavBar();
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("节点3");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("节点4");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("节点5");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("节点0", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("节点6");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("节点7");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("节点1", new System.Windows.Forms.TreeNode[] {
+            treeNode5,
+            treeNode6});
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("节点8");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("节点9");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("节点2", new System.Windows.Forms.TreeNode[] {
+            treeNode8,
+            treeNode9});
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("节点4");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("节点5");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("节点0", new System.Windows.Forms.TreeNode[] {
+            treeNode11,
+            treeNode12});
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("节点6");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("节点1", new System.Windows.Forms.TreeNode[] {
+            treeNode14});
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("节点7");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("节点8");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("节点2", new System.Windows.Forms.TreeNode[] {
+            treeNode16,
+            treeNode17});
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("节点3");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("节点4");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("节点5");
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("节点0", new System.Windows.Forms.TreeNode[] {
+            treeNode20,
+            treeNode21});
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("节点6");
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("节点1", new System.Windows.Forms.TreeNode[] {
+            treeNode23});
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("节点7");
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("节点8");
+            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("节点2", new System.Windows.Forms.TreeNode[] {
+            treeNode25,
+            treeNode26});
+            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("节点3");
+            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("节点4");
+            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("节点5");
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("节点0", new System.Windows.Forms.TreeNode[] {
+            treeNode29,
+            treeNode30});
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("节点6");
+            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("节点1", new System.Windows.Forms.TreeNode[] {
+            treeNode32});
+            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("节点7");
+            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("节点8");
+            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("节点2", new System.Windows.Forms.TreeNode[] {
+            treeNode34,
+            treeNode35});
+            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("节点3");
+            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("节点4");
+            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("节点5");
+            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("节点0", new System.Windows.Forms.TreeNode[] {
+            treeNode38,
+            treeNode39});
+            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("节点6");
+            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("节点1", new System.Windows.Forms.TreeNode[] {
+            treeNode41});
+            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("节点7");
+            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("节点8");
+            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("节点2", new System.Windows.Forms.TreeNode[] {
+            treeNode43,
+            treeNode44});
+            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("节点3");
+            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("节点4");
+            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("节点5");
+            System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("节点0", new System.Windows.Forms.TreeNode[] {
+            treeNode47,
+            treeNode48});
+            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("节点6");
+            System.Windows.Forms.TreeNode treeNode51 = new System.Windows.Forms.TreeNode("节点1", new System.Windows.Forms.TreeNode[] {
+            treeNode50});
+            System.Windows.Forms.TreeNode treeNode52 = new System.Windows.Forms.TreeNode("节点7");
+            System.Windows.Forms.TreeNode treeNode53 = new System.Windows.Forms.TreeNode("节点8");
+            System.Windows.Forms.TreeNode treeNode54 = new System.Windows.Forms.TreeNode("节点2", new System.Windows.Forms.TreeNode[] {
+            treeNode52,
+            treeNode53});
+            System.Windows.Forms.TreeNode treeNode55 = new System.Windows.Forms.TreeNode("节点3");
+            System.Windows.Forms.TreeNode treeNode56 = new System.Windows.Forms.TreeNode("节点4");
+            System.Windows.Forms.TreeNode treeNode57 = new System.Windows.Forms.TreeNode("节点5");
+            System.Windows.Forms.TreeNode treeNode58 = new System.Windows.Forms.TreeNode("节点0", new System.Windows.Forms.TreeNode[] {
+            treeNode56,
+            treeNode57});
+            System.Windows.Forms.TreeNode treeNode59 = new System.Windows.Forms.TreeNode("节点6");
+            System.Windows.Forms.TreeNode treeNode60 = new System.Windows.Forms.TreeNode("节点1", new System.Windows.Forms.TreeNode[] {
+            treeNode59});
+            System.Windows.Forms.TreeNode treeNode61 = new System.Windows.Forms.TreeNode("节点7");
+            System.Windows.Forms.TreeNode treeNode62 = new System.Windows.Forms.TreeNode("节点8");
+            System.Windows.Forms.TreeNode treeNode63 = new System.Windows.Forms.TreeNode("节点2", new System.Windows.Forms.TreeNode[] {
+            treeNode61,
+            treeNode62});
+            System.Windows.Forms.TreeNode treeNode64 = new System.Windows.Forms.TreeNode("节点3");
+            System.Windows.Forms.TreeNode treeNode65 = new System.Windows.Forms.TreeNode("节点4");
+            System.Windows.Forms.TreeNode treeNode66 = new System.Windows.Forms.TreeNode("节点5");
+            System.Windows.Forms.TreeNode treeNode67 = new System.Windows.Forms.TreeNode("节点0", new System.Windows.Forms.TreeNode[] {
+            treeNode65,
+            treeNode66});
+            System.Windows.Forms.TreeNode treeNode68 = new System.Windows.Forms.TreeNode("节点6");
+            System.Windows.Forms.TreeNode treeNode69 = new System.Windows.Forms.TreeNode("节点1", new System.Windows.Forms.TreeNode[] {
+            treeNode68});
+            System.Windows.Forms.TreeNode treeNode70 = new System.Windows.Forms.TreeNode("节点7");
+            System.Windows.Forms.TreeNode treeNode71 = new System.Windows.Forms.TreeNode("节点8");
+            System.Windows.Forms.TreeNode treeNode72 = new System.Windows.Forms.TreeNode("节点2", new System.Windows.Forms.TreeNode[] {
+            treeNode70,
+            treeNode71});
+            System.Windows.Forms.TreeNode treeNode73 = new System.Windows.Forms.TreeNode("节点3");
             this.jwNavBar1 = new Jw.Winform.Ctrls.JwNavBar();
-            this.jwIcon10 = new Jw.Winform.Ctrls.JwIcon();
-            this.jwIcon3 = new Jw.Winform.Ctrls.JwIcon();
-            this.jwLabel1 = new Jw.Winform.Ctrls.JwLabel();
-            this.jwSilderBar2 = new Jw.Winform.Ctrls.JwSilderBar();
-            this.jwSilderBar1 = new Jw.Winform.Ctrls.JwSilderBar();
-            this.jwIcon14 = new Jw.Winform.Ctrls.JwIcon();
-            this.jwIcon12 = new Jw.Winform.Ctrls.JwIcon();
-            this.jwIcon11 = new Jw.Winform.Ctrls.JwIcon();
-            this.jwIcon9 = new Jw.Winform.Ctrls.JwIcon();
-            this.jwIcon8 = new Jw.Winform.Ctrls.JwIcon();
-            this.jwIcon7 = new Jw.Winform.Ctrls.JwIcon();
-            this.jwIcon6 = new Jw.Winform.Ctrls.JwIcon();
-            this.jwIcon5 = new Jw.Winform.Ctrls.JwIcon();
-            this.jwIcon4 = new Jw.Winform.Ctrls.JwIcon();
-            this.jwIcon2 = new Jw.Winform.Ctrls.JwIcon();
-            this.jwIcon1 = new Jw.Winform.Ctrls.JwIcon();
+            this.jwNavBar2 = new Jw.Winform.Ctrls.JwNavBar();
+            this.jwNavBar3 = new Jw.Winform.Ctrls.JwNavBar();
+            this.jwNavBar4 = new Jw.Winform.Ctrls.JwNavBar();
+            this.jwNavBar5 = new Jw.Winform.Ctrls.JwNavBar();
+            this.jwNavBar6 = new Jw.Winform.Ctrls.JwNavBar();
+            this.jwNavBar7 = new Jw.Winform.Ctrls.JwNavBar();
+            this.jwNavBar8 = new Jw.Winform.Ctrls.JwNavBar();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(213, 412);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 15);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "label1";
-            // 
-            // jwNavBar3
-            // 
-            this.jwNavBar3.AdjustIconTop = 0;
-            this.jwNavBar3.BackColor = System.Drawing.Color.White;
-            this.jwNavBar3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.jwNavBar3.ChildNodeTheme = Jw.Winform.Ctrls.ThemeType.light;
-            this.jwNavBar3.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
-            this.jwNavBar3.FullRowSelect = true;
-            this.jwNavBar3.HideSelection = false;
-            this.jwNavBar3.IconChild = "arrow6-right";
-            this.jwNavBar3.IconChildSize = 18;
-            this.jwNavBar3.IconContract = "arrow3-up";
-            this.jwNavBar3.IconExpand = "arrow3-down";
-            this.jwNavBar3.IconTopSize = 16;
-            this.jwNavBar3.ItemHeight = 35;
-            this.jwNavBar3.Location = new System.Drawing.Point(217, 285);
-            this.jwNavBar3.Name = "jwNavBar3";
-            this.jwNavBar3.NodeHeight = 35;
-            this.jwNavBar3.NodePadding = new System.Windows.Forms.Padding(10, 0, 5, 0);
-            treeNode1.Name = "节点0";
-            treeNode1.Text = "节点0";
-            this.jwNavBar3.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1});
-            this.jwNavBar3.ShowLines = false;
-            this.jwNavBar3.ShowPlusMinus = false;
-            this.jwNavBar3.ShowRootLines = false;
-            this.jwNavBar3.Size = new System.Drawing.Size(121, 97);
-            this.jwNavBar3.TabIndex = 23;
-            this.jwNavBar3.TopNodeTheme = Jw.Winform.Ctrls.ThemeType.dark;
-            // 
-            // jwNavBar2
-            // 
-            this.jwNavBar2.AdjustIconTop = 0;
-            this.jwNavBar2.BackColor = System.Drawing.Color.White;
-            this.jwNavBar2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.jwNavBar2.ChildNodeTheme = Jw.Winform.Ctrls.ThemeType.light;
-            this.jwNavBar2.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
-            this.jwNavBar2.FullRowSelect = true;
-            this.jwNavBar2.HideSelection = false;
-            this.jwNavBar2.IconChild = "arrow6-right";
-            this.jwNavBar2.IconChildSize = 14;
-            this.jwNavBar2.IconContract = "arrow3-up";
-            this.jwNavBar2.IconExpand = "arrow3-down";
-            this.jwNavBar2.IconTopSize = 16;
-            this.jwNavBar2.ItemHeight = 35;
-            this.jwNavBar2.Location = new System.Drawing.Point(397, 267);
-            this.jwNavBar2.Name = "jwNavBar2";
-            this.jwNavBar2.NodeHeight = 35;
-            this.jwNavBar2.NodePadding = new System.Windows.Forms.Padding(10, 0, 5, 0);
-            treeNode2.Name = "节点0";
-            treeNode2.Text = "节点0";
-            this.jwNavBar2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
-            this.jwNavBar2.ShowLines = false;
-            this.jwNavBar2.ShowPlusMinus = false;
-            this.jwNavBar2.ShowRootLines = false;
-            this.jwNavBar2.Size = new System.Drawing.Size(121, 97);
-            this.jwNavBar2.TabIndex = 22;
-            this.jwNavBar2.TopNodeTheme = Jw.Winform.Ctrls.ThemeType.dark;
             // 
             // jwNavBar1
             // 
-            this.jwNavBar1.AdjustIconTop = 2;
-            this.jwNavBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.jwNavBar1.AdjustChildIconTop = 0;
+            this.jwNavBar1.AdjustTopIconTop = 0;
+            this.jwNavBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar1.Backgound = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar1.BackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.jwNavBar1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.jwNavBar1.ChildNodeTheme = Jw.Winform.Ctrls.ThemeType.light;
-            this.jwNavBar1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.jwNavBar1.ChildNodeBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
+            this.jwNavBar1.ChildNodeBorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
+            this.jwNavBar1.ChildNodeForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.jwNavBar1.ChildNodeForeColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.jwNavBar1.ChildNodeIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.jwNavBar1.ChildNodeIconColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.jwNavBar1.ClildNodeBackgound = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.jwNavBar1.ClildNodeBackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.jwNavBar1.Dock = System.Windows.Forms.DockStyle.Left;
             this.jwNavBar1.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
-            this.jwNavBar1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.jwNavBar1.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.jwNavBar1.FullRowSelect = true;
             this.jwNavBar1.HideSelection = false;
             this.jwNavBar1.IconChild = "arrow6-right";
-            this.jwNavBar1.IconChildSize = 16;
+            this.jwNavBar1.IconChildSize = 6;
             this.jwNavBar1.IconContract = "arrow3-up";
             this.jwNavBar1.IconExpand = "arrow3-down";
-            this.jwNavBar1.IconTopSize = 16;
-            this.jwNavBar1.ItemHeight = 35;
-            this.jwNavBar1.LineColor = System.Drawing.Color.White;
-            this.jwNavBar1.Location = new System.Drawing.Point(592, 0);
+            this.jwNavBar1.IconTopSize = 14;
+            this.jwNavBar1.ItemHeight = 40;
+            this.jwNavBar1.Location = new System.Drawing.Point(0, 0);
             this.jwNavBar1.Name = "jwNavBar1";
-            this.jwNavBar1.NodeHeight = 35;
-            this.jwNavBar1.NodePadding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            treeNode3.Name = "节点4";
-            treeNode3.Text = "节点4";
-            treeNode4.Name = "节点5";
-            treeNode4.Text = "节点5";
-            treeNode5.Name = "节点0";
-            treeNode5.Text = "节点0";
-            treeNode6.Name = "节点2";
-            treeNode6.Text = "节点2";
-            treeNode7.Name = "节点3";
-            treeNode7.Text = "节点3";
-            treeNode8.Name = "节点1";
-            treeNode8.Text = "节点1";
+            this.jwNavBar1.NodeHeight = 40;
+            this.jwNavBar1.NodePadding = new System.Windows.Forms.Padding(10, 0, 5, 0);
+            treeNode1.Name = "节点3";
+            treeNode1.Text = "节点3";
+            treeNode2.Name = "节点4";
+            treeNode2.Text = "节点4";
+            treeNode3.Name = "节点5";
+            treeNode3.Text = "节点5";
+            treeNode4.Name = "节点0";
+            treeNode4.Text = "节点0";
+            treeNode5.Name = "节点6";
+            treeNode5.Text = "节点6";
+            treeNode6.Name = "节点7";
+            treeNode6.Text = "节点7";
+            treeNode7.Name = "节点1";
+            treeNode7.Text = "节点1";
+            treeNode8.Name = "节点8";
+            treeNode8.Text = "节点8";
+            treeNode9.Name = "节点9";
+            treeNode9.Text = "节点9";
+            treeNode10.Name = "节点2";
+            treeNode10.Text = "节点2";
             this.jwNavBar1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode5,
-            treeNode8});
+            treeNode4,
+            treeNode7,
+            treeNode10});
             this.jwNavBar1.ShowLines = false;
             this.jwNavBar1.ShowPlusMinus = false;
             this.jwNavBar1.ShowRootLines = false;
-            this.jwNavBar1.Size = new System.Drawing.Size(208, 450);
-            this.jwNavBar1.TabIndex = 21;
-            this.jwNavBar1.TopNodeTheme = Jw.Winform.Ctrls.ThemeType.dark;
+            this.jwNavBar1.Size = new System.Drawing.Size(111, 450);
+            this.jwNavBar1.TabIndex = 0;
+            this.jwNavBar1.Theme = Jw.Winform.Ctrls.ThemeType.light;
+            this.jwNavBar1.TopNodeBackgound = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar1.TopNodeBackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.jwNavBar1.TopNodeBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.jwNavBar1.TopNodeBorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.jwNavBar1.TopNodeForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.jwNavBar1.TopNodeForeColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
-            // jwIcon10
+            // jwNavBar2
             // 
-            this.jwIcon10.AdjustIconTop = 0;
-            this.jwIcon10.AutoResize = false;
-            this.jwIcon10.BackColor = System.Drawing.Color.Transparent;
-            this.jwIcon10.BgActiveColor = System.Drawing.Color.Transparent;
-            this.jwIcon10.BgColor = System.Drawing.Color.Transparent;
-            this.jwIcon10.BgDisableColor = System.Drawing.Color.Transparent;
-            this.jwIcon10.BorderActiveColor = System.Drawing.Color.Black;
-            this.jwIcon10.BorderColor = System.Drawing.Color.Black;
-            this.jwIcon10.BorderDisableColor = System.Drawing.Color.Black;
-            this.jwIcon10.BorderWidth = 1;
-            this.jwIcon10.CententCenter = true;
-            this.jwIcon10.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.jwIcon10.ForeActiveColor = System.Drawing.Color.Black;
-            this.jwIcon10.ForeDisableColor = System.Drawing.Color.Black;
-            this.jwIcon10.IconActiveColor = System.Drawing.Color.Black;
-            this.jwIcon10.IconColor = System.Drawing.Color.Black;
-            this.jwIcon10.IconDisableColor = System.Drawing.Color.Black;
-            this.jwIcon10.IconSize = 8;
-            this.jwIcon10.IconText = "arrow6-right";
-            this.jwIcon10.Location = new System.Drawing.Point(127, 223);
-            this.jwIcon10.Name = "jwIcon10";
-            this.jwIcon10.Radius = 0;
-            this.jwIcon10.ShowFocused = true;
-            this.jwIcon10.Size = new System.Drawing.Size(80, 32);
-            this.jwIcon10.TabIndex = 19;
-            this.jwIcon10.Text = "jwIcon10";
-            this.jwIcon10.TextMarginLeft = 4;
-            this.jwIcon10.Theme = Jw.Winform.Ctrls.ThemeType.dark;
-            this.jwIcon10.Click += new System.EventHandler(this.jwIcon10_Click);
+            this.jwNavBar2.AdjustChildIconTop = 0;
+            this.jwNavBar2.AdjustTopIconTop = 0;
+            this.jwNavBar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar2.Backgound = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar2.BackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.jwNavBar2.ChildNodeBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
+            this.jwNavBar2.ChildNodeBorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
+            this.jwNavBar2.ChildNodeForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.jwNavBar2.ChildNodeForeColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.jwNavBar2.ChildNodeIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.jwNavBar2.ChildNodeIconColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.jwNavBar2.ClildNodeBackgound = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.jwNavBar2.ClildNodeBackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.jwNavBar2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.jwNavBar2.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
+            this.jwNavBar2.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.jwNavBar2.FullRowSelect = true;
+            this.jwNavBar2.HideSelection = false;
+            this.jwNavBar2.IconChild = "arrow6-right";
+            this.jwNavBar2.IconChildSize = 6;
+            this.jwNavBar2.IconContract = "arrow3-up";
+            this.jwNavBar2.IconExpand = "arrow3-down";
+            this.jwNavBar2.IconTopSize = 14;
+            this.jwNavBar2.ItemHeight = 40;
+            this.jwNavBar2.Location = new System.Drawing.Point(111, 0);
+            this.jwNavBar2.Name = "jwNavBar2";
+            this.jwNavBar2.NodeHeight = 40;
+            this.jwNavBar2.NodePadding = new System.Windows.Forms.Padding(10, 0, 5, 0);
+            treeNode11.Name = "节点4";
+            treeNode11.Text = "节点4";
+            treeNode12.Name = "节点5";
+            treeNode12.Text = "节点5";
+            treeNode13.Name = "节点0";
+            treeNode13.Text = "节点0";
+            treeNode14.Name = "节点6";
+            treeNode14.Text = "节点6";
+            treeNode15.Name = "节点1";
+            treeNode15.Text = "节点1";
+            treeNode16.Name = "节点7";
+            treeNode16.Text = "节点7";
+            treeNode17.Name = "节点8";
+            treeNode17.Text = "节点8";
+            treeNode18.Name = "节点2";
+            treeNode18.Text = "节点2";
+            treeNode19.Name = "节点3";
+            treeNode19.Text = "节点3";
+            this.jwNavBar2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode13,
+            treeNode15,
+            treeNode18,
+            treeNode19});
+            this.jwNavBar2.ShowLines = false;
+            this.jwNavBar2.ShowPlusMinus = false;
+            this.jwNavBar2.ShowRootLines = false;
+            this.jwNavBar2.Size = new System.Drawing.Size(114, 450);
+            this.jwNavBar2.TabIndex = 2;
+            this.jwNavBar2.Theme = Jw.Winform.Ctrls.ThemeType.primary;
+            this.jwNavBar2.TopNodeBackgound = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar2.TopNodeBackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.jwNavBar2.TopNodeBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.jwNavBar2.TopNodeBorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.jwNavBar2.TopNodeForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.jwNavBar2.TopNodeForeColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
-            // jwIcon3
+            // jwNavBar3
             // 
-            this.jwIcon3.AdjustIconTop = 0;
-            this.jwIcon3.AutoResize = false;
-            this.jwIcon3.BackColor = System.Drawing.Color.Transparent;
-            this.jwIcon3.BgActiveColor = System.Drawing.Color.Transparent;
-            this.jwIcon3.BgColor = System.Drawing.Color.Transparent;
-            this.jwIcon3.BgDisableColor = System.Drawing.Color.Transparent;
-            this.jwIcon3.BorderActiveColor = System.Drawing.Color.Black;
-            this.jwIcon3.BorderColor = System.Drawing.Color.Black;
-            this.jwIcon3.BorderDisableColor = System.Drawing.Color.Black;
-            this.jwIcon3.BorderWidth = 1;
-            this.jwIcon3.CententCenter = true;
-            this.jwIcon3.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.jwIcon3.ForeActiveColor = System.Drawing.Color.Black;
-            this.jwIcon3.ForeDisableColor = System.Drawing.Color.Black;
-            this.jwIcon3.IconActiveColor = System.Drawing.Color.Black;
-            this.jwIcon3.IconColor = System.Drawing.Color.Black;
-            this.jwIcon3.IconDisableColor = System.Drawing.Color.Black;
-            this.jwIcon3.IconSize = 20;
-            this.jwIcon3.IconText = "device-usb";
-            this.jwIcon3.Location = new System.Drawing.Point(14, 223);
-            this.jwIcon3.Name = "jwIcon3";
-            this.jwIcon3.Radius = 3;
-            this.jwIcon3.ShowFocused = true;
-            this.jwIcon3.Size = new System.Drawing.Size(80, 32);
-            this.jwIcon3.TabIndex = 18;
-            this.jwIcon3.Text = "jwIcon3";
-            this.jwIcon3.TextMarginLeft = 4;
-            this.jwIcon3.Theme = Jw.Winform.Ctrls.ThemeType.primary;
-            this.jwIcon3.Click += new System.EventHandler(this.jwIcon3_Click);
+            this.jwNavBar3.AdjustChildIconTop = 0;
+            this.jwNavBar3.AdjustTopIconTop = 0;
+            this.jwNavBar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar3.Backgound = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar3.BackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.jwNavBar3.ChildNodeBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
+            this.jwNavBar3.ChildNodeBorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
+            this.jwNavBar3.ChildNodeForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.jwNavBar3.ChildNodeForeColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.jwNavBar3.ChildNodeIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.jwNavBar3.ChildNodeIconColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.jwNavBar3.ClildNodeBackgound = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.jwNavBar3.ClildNodeBackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.jwNavBar3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.jwNavBar3.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
+            this.jwNavBar3.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.jwNavBar3.FullRowSelect = true;
+            this.jwNavBar3.HideSelection = false;
+            this.jwNavBar3.IconChild = "arrow6-right";
+            this.jwNavBar3.IconChildSize = 6;
+            this.jwNavBar3.IconContract = "arrow3-up";
+            this.jwNavBar3.IconExpand = "arrow3-down";
+            this.jwNavBar3.IconTopSize = 14;
+            this.jwNavBar3.ItemHeight = 40;
+            this.jwNavBar3.Location = new System.Drawing.Point(225, 0);
+            this.jwNavBar3.Name = "jwNavBar3";
+            this.jwNavBar3.NodeHeight = 40;
+            this.jwNavBar3.NodePadding = new System.Windows.Forms.Padding(10, 0, 5, 0);
+            treeNode20.Name = "节点4";
+            treeNode20.Text = "节点4";
+            treeNode21.Name = "节点5";
+            treeNode21.Text = "节点5";
+            treeNode22.Name = "节点0";
+            treeNode22.Text = "节点0";
+            treeNode23.Name = "节点6";
+            treeNode23.Text = "节点6";
+            treeNode24.Name = "节点1";
+            treeNode24.Text = "节点1";
+            treeNode25.Name = "节点7";
+            treeNode25.Text = "节点7";
+            treeNode26.Name = "节点8";
+            treeNode26.Text = "节点8";
+            treeNode27.Name = "节点2";
+            treeNode27.Text = "节点2";
+            treeNode28.Name = "节点3";
+            treeNode28.Text = "节点3";
+            this.jwNavBar3.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode22,
+            treeNode24,
+            treeNode27,
+            treeNode28});
+            this.jwNavBar3.ShowLines = false;
+            this.jwNavBar3.ShowPlusMinus = false;
+            this.jwNavBar3.ShowRootLines = false;
+            this.jwNavBar3.Size = new System.Drawing.Size(107, 450);
+            this.jwNavBar3.TabIndex = 3;
+            this.jwNavBar3.Theme = Jw.Winform.Ctrls.ThemeType.secondary;
+            this.jwNavBar3.TopNodeBackgound = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar3.TopNodeBackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.jwNavBar3.TopNodeBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.jwNavBar3.TopNodeBorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.jwNavBar3.TopNodeForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.jwNavBar3.TopNodeForeColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
-            // jwLabel1
+            // jwNavBar4
             // 
-            this.jwLabel1.AutoSize = true;
-            this.jwLabel1.Clickable = true;
-            this.jwLabel1.FocusBackColor = System.Drawing.Color.Black;
-            this.jwLabel1.FocusTextColor = System.Drawing.Color.White;
-            this.jwLabel1.Location = new System.Drawing.Point(12, 104);
-            this.jwLabel1.Name = "jwLabel1";
-            this.jwLabel1.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.jwLabel1.Size = new System.Drawing.Size(59, 22);
-            this.jwLabel1.TabIndex = 17;
-            this.jwLabel1.Text = "jwLabel1";
-            this.jwLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.jwNavBar4.AdjustChildIconTop = 0;
+            this.jwNavBar4.AdjustTopIconTop = 0;
+            this.jwNavBar4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar4.Backgound = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar4.BackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.jwNavBar4.ChildNodeBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
+            this.jwNavBar4.ChildNodeBorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
+            this.jwNavBar4.ChildNodeForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.jwNavBar4.ChildNodeForeColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.jwNavBar4.ChildNodeIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.jwNavBar4.ChildNodeIconColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.jwNavBar4.ClildNodeBackgound = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.jwNavBar4.ClildNodeBackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.jwNavBar4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.jwNavBar4.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
+            this.jwNavBar4.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.jwNavBar4.FullRowSelect = true;
+            this.jwNavBar4.HideSelection = false;
+            this.jwNavBar4.IconChild = "arrow6-right";
+            this.jwNavBar4.IconChildSize = 6;
+            this.jwNavBar4.IconContract = "arrow3-up";
+            this.jwNavBar4.IconExpand = "arrow3-down";
+            this.jwNavBar4.IconTopSize = 14;
+            this.jwNavBar4.ItemHeight = 40;
+            this.jwNavBar4.Location = new System.Drawing.Point(332, 0);
+            this.jwNavBar4.Name = "jwNavBar4";
+            this.jwNavBar4.NodeHeight = 40;
+            this.jwNavBar4.NodePadding = new System.Windows.Forms.Padding(10, 0, 5, 0);
+            treeNode29.Name = "节点4";
+            treeNode29.Text = "节点4";
+            treeNode30.Name = "节点5";
+            treeNode30.Text = "节点5";
+            treeNode31.Name = "节点0";
+            treeNode31.Text = "节点0";
+            treeNode32.Name = "节点6";
+            treeNode32.Text = "节点6";
+            treeNode33.Name = "节点1";
+            treeNode33.Text = "节点1";
+            treeNode34.Name = "节点7";
+            treeNode34.Text = "节点7";
+            treeNode35.Name = "节点8";
+            treeNode35.Text = "节点8";
+            treeNode36.Name = "节点2";
+            treeNode36.Text = "节点2";
+            treeNode37.Name = "节点3";
+            treeNode37.Text = "节点3";
+            this.jwNavBar4.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode31,
+            treeNode33,
+            treeNode36,
+            treeNode37});
+            this.jwNavBar4.ShowLines = false;
+            this.jwNavBar4.ShowPlusMinus = false;
+            this.jwNavBar4.ShowRootLines = false;
+            this.jwNavBar4.Size = new System.Drawing.Size(107, 450);
+            this.jwNavBar4.TabIndex = 4;
+            this.jwNavBar4.Theme = Jw.Winform.Ctrls.ThemeType.success;
+            this.jwNavBar4.TopNodeBackgound = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar4.TopNodeBackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.jwNavBar4.TopNodeBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.jwNavBar4.TopNodeBorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.jwNavBar4.TopNodeForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.jwNavBar4.TopNodeForeColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
-            // jwSilderBar2
+            // jwNavBar5
             // 
-            this.jwSilderBar2.DecimalPlaces = 0;
-            this.jwSilderBar2.LeftColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.jwSilderBar2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.jwSilderBar2.LineHight = 5F;
-            this.jwSilderBar2.Location = new System.Drawing.Point(12, 158);
-            this.jwSilderBar2.MaxValue = 100F;
-            this.jwSilderBar2.MinValue = 0F;
-            this.jwSilderBar2.Name = "jwSilderBar2";
-            this.jwSilderBar2.Radius = 2;
-            this.jwSilderBar2.ReadOnly = false;
-            this.jwSilderBar2.Size = new System.Drawing.Size(291, 23);
-            this.jwSilderBar2.TabIndex = 16;
-            this.jwSilderBar2.Text = "jwSilderBar1";
-            this.jwSilderBar2.TextLeftMargin = 8;
-            this.jwSilderBar2.TextVisable = true;
-            this.jwSilderBar2.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.jwSilderBar2.ThumbOutColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.jwSilderBar2.ThumbOutWidth = 3F;
-            this.jwSilderBar2.ThumbVisble = true;
-            this.jwSilderBar2.ThumbWidth = 13F;
-            this.jwSilderBar2.Value = 50F;
-            this.jwSilderBar2.ValueFormat = "{0}%";
-            this.jwSilderBar2.ValueType = Jw.Winform.Ctrls.JwSilderBarValueType.Percent;
+            this.jwNavBar5.AdjustChildIconTop = 0;
+            this.jwNavBar5.AdjustTopIconTop = 0;
+            this.jwNavBar5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar5.Backgound = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar5.BackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.jwNavBar5.ChildNodeBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
+            this.jwNavBar5.ChildNodeBorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
+            this.jwNavBar5.ChildNodeForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.jwNavBar5.ChildNodeForeColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.jwNavBar5.ChildNodeIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.jwNavBar5.ChildNodeIconColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.jwNavBar5.ClildNodeBackgound = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.jwNavBar5.ClildNodeBackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.jwNavBar5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.jwNavBar5.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
+            this.jwNavBar5.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.jwNavBar5.FullRowSelect = true;
+            this.jwNavBar5.HideSelection = false;
+            this.jwNavBar5.IconChild = "arrow6-right";
+            this.jwNavBar5.IconChildSize = 6;
+            this.jwNavBar5.IconContract = "arrow3-up";
+            this.jwNavBar5.IconExpand = "arrow3-down";
+            this.jwNavBar5.IconTopSize = 14;
+            this.jwNavBar5.ItemHeight = 40;
+            this.jwNavBar5.Location = new System.Drawing.Point(439, 0);
+            this.jwNavBar5.Name = "jwNavBar5";
+            this.jwNavBar5.NodeHeight = 40;
+            this.jwNavBar5.NodePadding = new System.Windows.Forms.Padding(10, 0, 5, 0);
+            treeNode38.Name = "节点4";
+            treeNode38.Text = "节点4";
+            treeNode39.Name = "节点5";
+            treeNode39.Text = "节点5";
+            treeNode40.Name = "节点0";
+            treeNode40.Text = "节点0";
+            treeNode41.Name = "节点6";
+            treeNode41.Text = "节点6";
+            treeNode42.Name = "节点1";
+            treeNode42.Text = "节点1";
+            treeNode43.Name = "节点7";
+            treeNode43.Text = "节点7";
+            treeNode44.Name = "节点8";
+            treeNode44.Text = "节点8";
+            treeNode45.Name = "节点2";
+            treeNode45.Text = "节点2";
+            treeNode46.Name = "节点3";
+            treeNode46.Text = "节点3";
+            this.jwNavBar5.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode40,
+            treeNode42,
+            treeNode45,
+            treeNode46});
+            this.jwNavBar5.ShowLines = false;
+            this.jwNavBar5.ShowPlusMinus = false;
+            this.jwNavBar5.ShowRootLines = false;
+            this.jwNavBar5.Size = new System.Drawing.Size(107, 450);
+            this.jwNavBar5.TabIndex = 5;
+            this.jwNavBar5.Theme = Jw.Winform.Ctrls.ThemeType.danger;
+            this.jwNavBar5.TopNodeBackgound = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar5.TopNodeBackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.jwNavBar5.TopNodeBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.jwNavBar5.TopNodeBorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.jwNavBar5.TopNodeForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.jwNavBar5.TopNodeForeColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
-            // jwSilderBar1
+            // jwNavBar6
             // 
-            this.jwSilderBar1.DecimalPlaces = 0;
-            this.jwSilderBar1.LeftColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.jwSilderBar1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.jwSilderBar1.LineHight = 5F;
-            this.jwSilderBar1.Location = new System.Drawing.Point(12, 129);
-            this.jwSilderBar1.MaxValue = 100F;
-            this.jwSilderBar1.MinValue = 0F;
-            this.jwSilderBar1.Name = "jwSilderBar1";
-            this.jwSilderBar1.Radius = 2;
-            this.jwSilderBar1.ReadOnly = false;
-            this.jwSilderBar1.Size = new System.Drawing.Size(291, 23);
-            this.jwSilderBar1.TabIndex = 16;
-            this.jwSilderBar1.Text = "jwSilderBar1";
-            this.jwSilderBar1.TextLeftMargin = 8;
-            this.jwSilderBar1.TextVisable = false;
-            this.jwSilderBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.jwSilderBar1.ThumbOutColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.jwSilderBar1.ThumbOutWidth = 3F;
-            this.jwSilderBar1.ThumbVisble = true;
-            this.jwSilderBar1.ThumbWidth = 13F;
-            this.jwSilderBar1.Value = 80F;
-            this.jwSilderBar1.ValueFormat = "";
-            this.jwSilderBar1.ValueType = Jw.Winform.Ctrls.JwSilderBarValueType.Percent;
+            this.jwNavBar6.AdjustChildIconTop = 0;
+            this.jwNavBar6.AdjustTopIconTop = 0;
+            this.jwNavBar6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar6.Backgound = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar6.BackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.jwNavBar6.ChildNodeBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
+            this.jwNavBar6.ChildNodeBorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
+            this.jwNavBar6.ChildNodeForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.jwNavBar6.ChildNodeForeColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.jwNavBar6.ChildNodeIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.jwNavBar6.ChildNodeIconColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.jwNavBar6.ClildNodeBackgound = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.jwNavBar6.ClildNodeBackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.jwNavBar6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.jwNavBar6.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
+            this.jwNavBar6.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.jwNavBar6.FullRowSelect = true;
+            this.jwNavBar6.HideSelection = false;
+            this.jwNavBar6.IconChild = "arrow6-right";
+            this.jwNavBar6.IconChildSize = 6;
+            this.jwNavBar6.IconContract = "arrow3-up";
+            this.jwNavBar6.IconExpand = "arrow3-down";
+            this.jwNavBar6.IconTopSize = 14;
+            this.jwNavBar6.ItemHeight = 40;
+            this.jwNavBar6.Location = new System.Drawing.Point(546, 0);
+            this.jwNavBar6.Name = "jwNavBar6";
+            this.jwNavBar6.NodeHeight = 40;
+            this.jwNavBar6.NodePadding = new System.Windows.Forms.Padding(10, 0, 5, 0);
+            treeNode47.Name = "节点4";
+            treeNode47.Text = "节点4";
+            treeNode48.Name = "节点5";
+            treeNode48.Text = "节点5";
+            treeNode49.Name = "节点0";
+            treeNode49.Text = "节点0";
+            treeNode50.Name = "节点6";
+            treeNode50.Text = "节点6";
+            treeNode51.Name = "节点1";
+            treeNode51.Text = "节点1";
+            treeNode52.Name = "节点7";
+            treeNode52.Text = "节点7";
+            treeNode53.Name = "节点8";
+            treeNode53.Text = "节点8";
+            treeNode54.Name = "节点2";
+            treeNode54.Text = "节点2";
+            treeNode55.Name = "节点3";
+            treeNode55.Text = "节点3";
+            this.jwNavBar6.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode49,
+            treeNode51,
+            treeNode54,
+            treeNode55});
+            this.jwNavBar6.ShowLines = false;
+            this.jwNavBar6.ShowPlusMinus = false;
+            this.jwNavBar6.ShowRootLines = false;
+            this.jwNavBar6.Size = new System.Drawing.Size(99, 450);
+            this.jwNavBar6.TabIndex = 6;
+            this.jwNavBar6.Theme = Jw.Winform.Ctrls.ThemeType.warning;
+            this.jwNavBar6.TopNodeBackgound = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar6.TopNodeBackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.jwNavBar6.TopNodeBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.jwNavBar6.TopNodeBorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.jwNavBar6.TopNodeForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.jwNavBar6.TopNodeForeColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
-            // jwIcon14
+            // jwNavBar7
             // 
-            this.jwIcon14.AdjustIconTop = 0;
-            this.jwIcon14.AutoResize = true;
-            this.jwIcon14.BackColor = System.Drawing.Color.Transparent;
-            this.jwIcon14.BgActiveColor = System.Drawing.Color.Transparent;
-            this.jwIcon14.BgColor = System.Drawing.Color.Transparent;
-            this.jwIcon14.BgDisableColor = System.Drawing.Color.Transparent;
-            this.jwIcon14.BorderActiveColor = System.Drawing.Color.Black;
-            this.jwIcon14.BorderColor = System.Drawing.Color.Black;
-            this.jwIcon14.BorderDisableColor = System.Drawing.Color.Black;
-            this.jwIcon14.BorderWidth = 0;
-            this.jwIcon14.CententCenter = true;
-            this.jwIcon14.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.jwIcon14.ForeActiveColor = System.Drawing.Color.Black;
-            this.jwIcon14.ForeDisableColor = System.Drawing.Color.Black;
-            this.jwIcon14.IconActiveColor = System.Drawing.Color.Black;
-            this.jwIcon14.IconColor = System.Drawing.Color.Black;
-            this.jwIcon14.IconDisableColor = System.Drawing.Color.Black;
-            this.jwIcon14.IconSize = 50;
-            this.jwIcon14.IconText = "icon-help-fill";
-            this.jwIcon14.Location = new System.Drawing.Point(231, 69);
-            this.jwIcon14.Name = "jwIcon14";
-            this.jwIcon14.Radius = 0;
-            this.jwIcon14.ShowFocused = true;
-            this.jwIcon14.Size = new System.Drawing.Size(50, 57);
-            this.jwIcon14.TabIndex = 15;
-            this.jwIcon14.TextMarginLeft = 4;
-            this.jwIcon14.Theme = Jw.Winform.Ctrls.ThemeType.none;
+            this.jwNavBar7.AdjustChildIconTop = 0;
+            this.jwNavBar7.AdjustTopIconTop = 0;
+            this.jwNavBar7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar7.Backgound = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar7.BackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.jwNavBar7.ChildNodeBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
+            this.jwNavBar7.ChildNodeBorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
+            this.jwNavBar7.ChildNodeForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.jwNavBar7.ChildNodeForeColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.jwNavBar7.ChildNodeIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.jwNavBar7.ChildNodeIconColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.jwNavBar7.ClildNodeBackgound = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.jwNavBar7.ClildNodeBackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.jwNavBar7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.jwNavBar7.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
+            this.jwNavBar7.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.jwNavBar7.FullRowSelect = true;
+            this.jwNavBar7.HideSelection = false;
+            this.jwNavBar7.IconChild = "arrow6-right";
+            this.jwNavBar7.IconChildSize = 6;
+            this.jwNavBar7.IconContract = "arrow3-up";
+            this.jwNavBar7.IconExpand = "arrow3-down";
+            this.jwNavBar7.IconTopSize = 14;
+            this.jwNavBar7.ItemHeight = 40;
+            this.jwNavBar7.Location = new System.Drawing.Point(645, 0);
+            this.jwNavBar7.Name = "jwNavBar7";
+            this.jwNavBar7.NodeHeight = 40;
+            this.jwNavBar7.NodePadding = new System.Windows.Forms.Padding(10, 0, 5, 0);
+            treeNode56.Name = "节点4";
+            treeNode56.Text = "节点4";
+            treeNode57.Name = "节点5";
+            treeNode57.Text = "节点5";
+            treeNode58.Name = "节点0";
+            treeNode58.Text = "节点0";
+            treeNode59.Name = "节点6";
+            treeNode59.Text = "节点6";
+            treeNode60.Name = "节点1";
+            treeNode60.Text = "节点1";
+            treeNode61.Name = "节点7";
+            treeNode61.Text = "节点7";
+            treeNode62.Name = "节点8";
+            treeNode62.Text = "节点8";
+            treeNode63.Name = "节点2";
+            treeNode63.Text = "节点2";
+            treeNode64.Name = "节点3";
+            treeNode64.Text = "节点3";
+            this.jwNavBar7.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode58,
+            treeNode60,
+            treeNode63,
+            treeNode64});
+            this.jwNavBar7.ShowLines = false;
+            this.jwNavBar7.ShowPlusMinus = false;
+            this.jwNavBar7.ShowRootLines = false;
+            this.jwNavBar7.Size = new System.Drawing.Size(103, 450);
+            this.jwNavBar7.TabIndex = 7;
+            this.jwNavBar7.Theme = Jw.Winform.Ctrls.ThemeType.info;
+            this.jwNavBar7.TopNodeBackgound = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar7.TopNodeBackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.jwNavBar7.TopNodeBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.jwNavBar7.TopNodeBorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.jwNavBar7.TopNodeForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.jwNavBar7.TopNodeForeColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
-            // jwIcon12
+            // jwNavBar8
             // 
-            this.jwIcon12.AdjustIconTop = 1;
-            this.jwIcon12.AutoResize = false;
-            this.jwIcon12.BackColor = System.Drawing.Color.Transparent;
-            this.jwIcon12.BgActiveColor = System.Drawing.Color.Black;
-            this.jwIcon12.BgColor = System.Drawing.Color.Black;
-            this.jwIcon12.BgDisableColor = System.Drawing.Color.Black;
-            this.jwIcon12.BorderActiveColor = System.Drawing.Color.Black;
-            this.jwIcon12.BorderColor = System.Drawing.Color.Black;
-            this.jwIcon12.BorderDisableColor = System.Drawing.Color.Black;
-            this.jwIcon12.BorderWidth = 1;
-            this.jwIcon12.CententCenter = true;
-            this.jwIcon12.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.jwIcon12.ForeActiveColor = System.Drawing.Color.Black;
-            this.jwIcon12.ForeDisableColor = System.Drawing.Color.Black;
-            this.jwIcon12.IconActiveColor = System.Drawing.Color.Black;
-            this.jwIcon12.IconColor = System.Drawing.Color.Black;
-            this.jwIcon12.IconDisableColor = System.Drawing.Color.Black;
-            this.jwIcon12.IconSize = 20;
-            this.jwIcon12.IconText = "bill-qrqcode";
-            this.jwIcon12.Location = new System.Drawing.Point(339, 69);
-            this.jwIcon12.Name = "jwIcon12";
-            this.jwIcon12.Radius = 3;
-            this.jwIcon12.ShowFocused = true;
-            this.jwIcon12.Size = new System.Drawing.Size(80, 32);
-            this.jwIcon12.TabIndex = 13;
-            this.jwIcon12.Text = "dark";
-            this.jwIcon12.TextMarginLeft = 4;
-            this.jwIcon12.Theme = Jw.Winform.Ctrls.ThemeType.dark;
-            // 
-            // jwIcon11
-            // 
-            this.jwIcon11.AdjustIconTop = 1;
-            this.jwIcon11.AutoResize = false;
-            this.jwIcon11.BackColor = System.Drawing.Color.Transparent;
-            this.jwIcon11.BgActiveColor = System.Drawing.Color.Black;
-            this.jwIcon11.BgColor = System.Drawing.Color.Black;
-            this.jwIcon11.BgDisableColor = System.Drawing.Color.Black;
-            this.jwIcon11.BorderActiveColor = System.Drawing.Color.Black;
-            this.jwIcon11.BorderColor = System.Drawing.Color.Black;
-            this.jwIcon11.BorderDisableColor = System.Drawing.Color.Black;
-            this.jwIcon11.BorderWidth = 1;
-            this.jwIcon11.CententCenter = true;
-            this.jwIcon11.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.jwIcon11.ForeActiveColor = System.Drawing.Color.Black;
-            this.jwIcon11.ForeDisableColor = System.Drawing.Color.Black;
-            this.jwIcon11.IconActiveColor = System.Drawing.Color.Black;
-            this.jwIcon11.IconColor = System.Drawing.Color.Black;
-            this.jwIcon11.IconDisableColor = System.Drawing.Color.Black;
-            this.jwIcon11.IconSize = 20;
-            this.jwIcon11.IconText = "device-wifi";
-            this.jwIcon11.Location = new System.Drawing.Point(240, 69);
-            this.jwIcon11.Name = "jwIcon11";
-            this.jwIcon11.Radius = 3;
-            this.jwIcon11.ShowFocused = true;
-            this.jwIcon11.Size = new System.Drawing.Size(80, 32);
-            this.jwIcon11.TabIndex = 12;
-            this.jwIcon11.Text = "light";
-            this.jwIcon11.TextMarginLeft = 4;
-            this.jwIcon11.Theme = Jw.Winform.Ctrls.ThemeType.light;
-            // 
-            // jwIcon9
-            // 
-            this.jwIcon9.AdjustIconTop = 2;
-            this.jwIcon9.AutoResize = false;
-            this.jwIcon9.BackColor = System.Drawing.Color.Transparent;
-            this.jwIcon9.BgActiveColor = System.Drawing.Color.Black;
-            this.jwIcon9.BgColor = System.Drawing.Color.Black;
-            this.jwIcon9.BgDisableColor = System.Drawing.Color.Black;
-            this.jwIcon9.BorderActiveColor = System.Drawing.Color.Black;
-            this.jwIcon9.BorderColor = System.Drawing.Color.Black;
-            this.jwIcon9.BorderDisableColor = System.Drawing.Color.Black;
-            this.jwIcon9.BorderWidth = 1;
-            this.jwIcon9.CententCenter = true;
-            this.jwIcon9.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.jwIcon9.ForeActiveColor = System.Drawing.Color.Black;
-            this.jwIcon9.ForeDisableColor = System.Drawing.Color.Black;
-            this.jwIcon9.IconActiveColor = System.Drawing.Color.Black;
-            this.jwIcon9.IconColor = System.Drawing.Color.Black;
-            this.jwIcon9.IconDisableColor = System.Drawing.Color.Black;
-            this.jwIcon9.IconSize = 20;
-            this.jwIcon9.IconText = "icon-warning";
-            this.jwIcon9.Location = new System.Drawing.Point(326, 25);
-            this.jwIcon9.Name = "jwIcon9";
-            this.jwIcon9.Radius = 3;
-            this.jwIcon9.ShowFocused = true;
-            this.jwIcon9.Size = new System.Drawing.Size(80, 32);
-            this.jwIcon9.TabIndex = 10;
-            this.jwIcon9.Text = "warning";
-            this.jwIcon9.TextMarginLeft = 4;
-            this.jwIcon9.Theme = Jw.Winform.Ctrls.ThemeType.warning;
-            // 
-            // jwIcon8
-            // 
-            this.jwIcon8.AdjustIconTop = 2;
-            this.jwIcon8.AutoResize = false;
-            this.jwIcon8.BackColor = System.Drawing.Color.Transparent;
-            this.jwIcon8.BgActiveColor = System.Drawing.Color.Black;
-            this.jwIcon8.BgColor = System.Drawing.Color.Black;
-            this.jwIcon8.BgDisableColor = System.Drawing.Color.Black;
-            this.jwIcon8.BorderActiveColor = System.Drawing.Color.Black;
-            this.jwIcon8.BorderColor = System.Drawing.Color.Black;
-            this.jwIcon8.BorderDisableColor = System.Drawing.Color.Black;
-            this.jwIcon8.BorderWidth = 1;
-            this.jwIcon8.CententCenter = true;
-            this.jwIcon8.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.jwIcon8.ForeActiveColor = System.Drawing.Color.Black;
-            this.jwIcon8.ForeDisableColor = System.Drawing.Color.Black;
-            this.jwIcon8.IconActiveColor = System.Drawing.Color.Black;
-            this.jwIcon8.IconColor = System.Drawing.Color.Black;
-            this.jwIcon8.IconDisableColor = System.Drawing.Color.Black;
-            this.jwIcon8.IconSize = 20;
-            this.jwIcon8.IconText = "icon-help";
-            this.jwIcon8.Location = new System.Drawing.Point(227, 25);
-            this.jwIcon8.Name = "jwIcon8";
-            this.jwIcon8.Radius = 3;
-            this.jwIcon8.ShowFocused = true;
-            this.jwIcon8.Size = new System.Drawing.Size(80, 32);
-            this.jwIcon8.TabIndex = 9;
-            this.jwIcon8.Text = "danger";
-            this.jwIcon8.TextMarginLeft = 4;
-            this.jwIcon8.Theme = Jw.Winform.Ctrls.ThemeType.danger;
-            // 
-            // jwIcon7
-            // 
-            this.jwIcon7.AdjustIconTop = 2;
-            this.jwIcon7.AutoResize = false;
-            this.jwIcon7.BackColor = System.Drawing.Color.Transparent;
-            this.jwIcon7.BgActiveColor = System.Drawing.Color.Black;
-            this.jwIcon7.BgColor = System.Drawing.Color.Black;
-            this.jwIcon7.BgDisableColor = System.Drawing.Color.Black;
-            this.jwIcon7.BorderActiveColor = System.Drawing.Color.Black;
-            this.jwIcon7.BorderColor = System.Drawing.Color.Black;
-            this.jwIcon7.BorderDisableColor = System.Drawing.Color.Black;
-            this.jwIcon7.BorderWidth = 1;
-            this.jwIcon7.CententCenter = true;
-            this.jwIcon7.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.jwIcon7.ForeActiveColor = System.Drawing.Color.Black;
-            this.jwIcon7.ForeDisableColor = System.Drawing.Color.Black;
-            this.jwIcon7.IconActiveColor = System.Drawing.Color.Black;
-            this.jwIcon7.IconColor = System.Drawing.Color.Black;
-            this.jwIcon7.IconDisableColor = System.Drawing.Color.Black;
-            this.jwIcon7.IconSize = 20;
-            this.jwIcon7.IconText = "op1-succ";
-            this.jwIcon7.Location = new System.Drawing.Point(428, 25);
-            this.jwIcon7.Name = "jwIcon7";
-            this.jwIcon7.Radius = 3;
-            this.jwIcon7.ShowFocused = true;
-            this.jwIcon7.Size = new System.Drawing.Size(80, 32);
-            this.jwIcon7.TabIndex = 8;
-            this.jwIcon7.Text = "success";
-            this.jwIcon7.TextMarginLeft = 4;
-            this.jwIcon7.Theme = Jw.Winform.Ctrls.ThemeType.success;
-            // 
-            // jwIcon6
-            // 
-            this.jwIcon6.AdjustIconTop = 2;
-            this.jwIcon6.AutoResize = false;
-            this.jwIcon6.BackColor = System.Drawing.Color.Transparent;
-            this.jwIcon6.BgActiveColor = System.Drawing.Color.Black;
-            this.jwIcon6.BgColor = System.Drawing.Color.Black;
-            this.jwIcon6.BgDisableColor = System.Drawing.Color.Black;
-            this.jwIcon6.BorderActiveColor = System.Drawing.Color.Black;
-            this.jwIcon6.BorderColor = System.Drawing.Color.Black;
-            this.jwIcon6.BorderDisableColor = System.Drawing.Color.Black;
-            this.jwIcon6.BorderWidth = 1;
-            this.jwIcon6.CententCenter = true;
-            this.jwIcon6.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.jwIcon6.ForeActiveColor = System.Drawing.Color.Black;
-            this.jwIcon6.ForeDisableColor = System.Drawing.Color.Black;
-            this.jwIcon6.IconActiveColor = System.Drawing.Color.Black;
-            this.jwIcon6.IconColor = System.Drawing.Color.Black;
-            this.jwIcon6.IconDisableColor = System.Drawing.Color.Black;
-            this.jwIcon6.IconSize = 18;
-            this.jwIcon6.IconText = "arrow1-left";
-            this.jwIcon6.Location = new System.Drawing.Point(109, 25);
-            this.jwIcon6.Name = "jwIcon6";
-            this.jwIcon6.Radius = 3;
-            this.jwIcon6.ShowFocused = true;
-            this.jwIcon6.Size = new System.Drawing.Size(98, 32);
-            this.jwIcon6.TabIndex = 7;
-            this.jwIcon6.Text = "secondary";
-            this.jwIcon6.TextMarginLeft = 4;
-            this.jwIcon6.Theme = Jw.Winform.Ctrls.ThemeType.secondary;
-            // 
-            // jwIcon5
-            // 
-            this.jwIcon5.AdjustIconTop = 0;
-            this.jwIcon5.AutoResize = false;
-            this.jwIcon5.BackColor = System.Drawing.Color.Transparent;
-            this.jwIcon5.BgActiveColor = System.Drawing.Color.Black;
-            this.jwIcon5.BgColor = System.Drawing.Color.Black;
-            this.jwIcon5.BgDisableColor = System.Drawing.Color.Black;
-            this.jwIcon5.BorderActiveColor = System.Drawing.Color.Black;
-            this.jwIcon5.BorderColor = System.Drawing.Color.Black;
-            this.jwIcon5.BorderDisableColor = System.Drawing.Color.Black;
-            this.jwIcon5.BorderWidth = 1;
-            this.jwIcon5.CententCenter = true;
-            this.jwIcon5.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.jwIcon5.ForeActiveColor = System.Drawing.Color.Black;
-            this.jwIcon5.ForeDisableColor = System.Drawing.Color.Black;
-            this.jwIcon5.IconActiveColor = System.Drawing.Color.Black;
-            this.jwIcon5.IconColor = System.Drawing.Color.Black;
-            this.jwIcon5.IconDisableColor = System.Drawing.Color.Black;
-            this.jwIcon5.IconSize = 20;
-            this.jwIcon5.IconText = "arrow3-down";
-            this.jwIcon5.Location = new System.Drawing.Point(13, 25);
-            this.jwIcon5.Name = "jwIcon5";
-            this.jwIcon5.Radius = 3;
-            this.jwIcon5.ShowFocused = true;
-            this.jwIcon5.Size = new System.Drawing.Size(80, 32);
-            this.jwIcon5.TabIndex = 6;
-            this.jwIcon5.Text = "primary";
-            this.jwIcon5.TextMarginLeft = 4;
-            this.jwIcon5.Theme = Jw.Winform.Ctrls.ThemeType.primary;
-            this.jwIcon5.Click += new System.EventHandler(this.jwIcon5_Click);
-            // 
-            // jwIcon4
-            // 
-            this.jwIcon4.AdjustIconTop = 1;
-            this.jwIcon4.AutoResize = false;
-            this.jwIcon4.BackColor = System.Drawing.Color.Transparent;
-            this.jwIcon4.BgActiveColor = System.Drawing.Color.Black;
-            this.jwIcon4.BgColor = System.Drawing.Color.Transparent;
-            this.jwIcon4.BgDisableColor = System.Drawing.Color.Transparent;
-            this.jwIcon4.BorderActiveColor = System.Drawing.Color.Transparent;
-            this.jwIcon4.BorderColor = System.Drawing.Color.Black;
-            this.jwIcon4.BorderDisableColor = System.Drawing.Color.Black;
-            this.jwIcon4.BorderWidth = 0;
-            this.jwIcon4.CententCenter = true;
-            this.jwIcon4.Enabled = false;
-            this.jwIcon4.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.jwIcon4.ForeActiveColor = System.Drawing.Color.Black;
-            this.jwIcon4.ForeDisableColor = System.Drawing.Color.Black;
-            this.jwIcon4.IconActiveColor = System.Drawing.Color.Black;
-            this.jwIcon4.IconColor = System.Drawing.Color.Black;
-            this.jwIcon4.IconDisableColor = System.Drawing.Color.Black;
-            this.jwIcon4.IconSize = 20;
-            this.jwIcon4.IconText = "op1-reeor";
-            this.jwIcon4.Location = new System.Drawing.Point(13, 69);
-            this.jwIcon4.Name = "jwIcon4";
-            this.jwIcon4.Radius = 3;
-            this.jwIcon4.ShowFocused = true;
-            this.jwIcon4.Size = new System.Drawing.Size(80, 32);
-            this.jwIcon4.TabIndex = 5;
-            this.jwIcon4.Text = "Disable";
-            this.jwIcon4.TextMarginLeft = 4;
-            this.jwIcon4.Theme = Jw.Winform.Ctrls.ThemeType.none;
-            // 
-            // jwIcon2
-            // 
-            this.jwIcon2.AdjustIconTop = 0;
-            this.jwIcon2.AutoResize = false;
-            this.jwIcon2.BackColor = System.Drawing.Color.Transparent;
-            this.jwIcon2.BgActiveColor = System.Drawing.Color.Black;
-            this.jwIcon2.BgColor = System.Drawing.Color.Black;
-            this.jwIcon2.BgDisableColor = System.Drawing.Color.Black;
-            this.jwIcon2.BorderActiveColor = System.Drawing.Color.Black;
-            this.jwIcon2.BorderColor = System.Drawing.Color.Black;
-            this.jwIcon2.BorderDisableColor = System.Drawing.Color.Black;
-            this.jwIcon2.BorderWidth = 1;
-            this.jwIcon2.CententCenter = true;
-            this.jwIcon2.Enabled = false;
-            this.jwIcon2.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.jwIcon2.ForeActiveColor = System.Drawing.Color.Black;
-            this.jwIcon2.ForeDisableColor = System.Drawing.Color.Black;
-            this.jwIcon2.IconActiveColor = System.Drawing.Color.Black;
-            this.jwIcon2.IconColor = System.Drawing.Color.Black;
-            this.jwIcon2.IconDisableColor = System.Drawing.Color.Black;
-            this.jwIcon2.IconSize = 20;
-            this.jwIcon2.IconText = "";
-            this.jwIcon2.Location = new System.Drawing.Point(145, 69);
-            this.jwIcon2.Name = "jwIcon2";
-            this.jwIcon2.Radius = 3;
-            this.jwIcon2.ShowFocused = true;
-            this.jwIcon2.Size = new System.Drawing.Size(80, 30);
-            this.jwIcon2.TabIndex = 4;
-            this.jwIcon2.Text = "宋体宋体";
-            this.jwIcon2.TextMarginLeft = 4;
-            this.jwIcon2.Theme = Jw.Winform.Ctrls.ThemeType.primary;
-            // 
-            // jwIcon1
-            // 
-            this.jwIcon1.AdjustIconTop = 0;
-            this.jwIcon1.AutoResize = false;
-            this.jwIcon1.BackColor = System.Drawing.Color.Transparent;
-            this.jwIcon1.BgActiveColor = System.Drawing.Color.Black;
-            this.jwIcon1.BgColor = System.Drawing.Color.Black;
-            this.jwIcon1.BgDisableColor = System.Drawing.Color.Black;
-            this.jwIcon1.BorderActiveColor = System.Drawing.Color.Black;
-            this.jwIcon1.BorderColor = System.Drawing.Color.Black;
-            this.jwIcon1.BorderDisableColor = System.Drawing.Color.Black;
-            this.jwIcon1.BorderWidth = 0;
-            this.jwIcon1.CententCenter = true;
-            this.jwIcon1.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.jwIcon1.ForeActiveColor = System.Drawing.Color.Black;
-            this.jwIcon1.ForeDisableColor = System.Drawing.Color.Black;
-            this.jwIcon1.IconActiveColor = System.Drawing.Color.Black;
-            this.jwIcon1.IconColor = System.Drawing.Color.Black;
-            this.jwIcon1.IconDisableColor = System.Drawing.Color.Black;
-            this.jwIcon1.IconSize = 18;
-            this.jwIcon1.IconText = "arrow3-down";
-            this.jwIcon1.Location = new System.Drawing.Point(109, 69);
-            this.jwIcon1.Name = "jwIcon1";
-            this.jwIcon1.Padding = new System.Windows.Forms.Padding(5);
-            this.jwIcon1.Radius = 0;
-            this.jwIcon1.ShowFocused = true;
-            this.jwIcon1.Size = new System.Drawing.Size(30, 30);
-            this.jwIcon1.TabIndex = 3;
-            this.jwIcon1.TextMarginLeft = 4;
-            this.jwIcon1.Theme = Jw.Winform.Ctrls.ThemeType.primary;
+            this.jwNavBar8.AdjustChildIconTop = 0;
+            this.jwNavBar8.AdjustTopIconTop = 0;
+            this.jwNavBar8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar8.Backgound = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar8.BackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.jwNavBar8.ChildNodeBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
+            this.jwNavBar8.ChildNodeBorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
+            this.jwNavBar8.ChildNodeForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.jwNavBar8.ChildNodeForeColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.jwNavBar8.ChildNodeIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.jwNavBar8.ChildNodeIconColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.jwNavBar8.ClildNodeBackgound = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.jwNavBar8.ClildNodeBackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.jwNavBar8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.jwNavBar8.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
+            this.jwNavBar8.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.jwNavBar8.FullRowSelect = true;
+            this.jwNavBar8.HideSelection = false;
+            this.jwNavBar8.IconChild = "arrow6-right";
+            this.jwNavBar8.IconChildSize = 6;
+            this.jwNavBar8.IconContract = "arrow3-up";
+            this.jwNavBar8.IconExpand = "arrow3-down";
+            this.jwNavBar8.IconTopSize = 14;
+            this.jwNavBar8.ItemHeight = 40;
+            this.jwNavBar8.Location = new System.Drawing.Point(748, 0);
+            this.jwNavBar8.Name = "jwNavBar8";
+            this.jwNavBar8.NodeHeight = 40;
+            this.jwNavBar8.NodePadding = new System.Windows.Forms.Padding(10, 0, 5, 0);
+            treeNode65.Name = "节点4";
+            treeNode65.Text = "节点4";
+            treeNode66.Name = "节点5";
+            treeNode66.Text = "节点5";
+            treeNode67.Name = "节点0";
+            treeNode67.Text = "节点0";
+            treeNode68.Name = "节点6";
+            treeNode68.Text = "节点6";
+            treeNode69.Name = "节点1";
+            treeNode69.Text = "节点1";
+            treeNode70.Name = "节点7";
+            treeNode70.Text = "节点7";
+            treeNode71.Name = "节点8";
+            treeNode71.Text = "节点8";
+            treeNode72.Name = "节点2";
+            treeNode72.Text = "节点2";
+            treeNode73.Name = "节点3";
+            treeNode73.Text = "节点3";
+            this.jwNavBar8.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode67,
+            treeNode69,
+            treeNode72,
+            treeNode73});
+            this.jwNavBar8.ShowLines = false;
+            this.jwNavBar8.ShowPlusMinus = false;
+            this.jwNavBar8.ShowRootLines = false;
+            this.jwNavBar8.Size = new System.Drawing.Size(103, 450);
+            this.jwNavBar8.TabIndex = 8;
+            this.jwNavBar8.Theme = Jw.Winform.Ctrls.ThemeType.light;
+            this.jwNavBar8.TopNodeBackgound = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.jwNavBar8.TopNodeBackgoundActive = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.jwNavBar8.TopNodeBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.jwNavBar8.TopNodeBorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.jwNavBar8.TopNodeForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.jwNavBar8.TopNodeForeColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1029, 450);
+            this.Controls.Add(this.jwNavBar8);
+            this.Controls.Add(this.jwNavBar7);
+            this.Controls.Add(this.jwNavBar6);
+            this.Controls.Add(this.jwNavBar5);
+            this.Controls.Add(this.jwNavBar4);
             this.Controls.Add(this.jwNavBar3);
             this.Controls.Add(this.jwNavBar2);
             this.Controls.Add(this.jwNavBar1);
-            this.Controls.Add(this.jwIcon10);
-            this.Controls.Add(this.jwIcon3);
-            this.Controls.Add(this.jwLabel1);
-            this.Controls.Add(this.jwSilderBar2);
-            this.Controls.Add(this.jwSilderBar1);
-            this.Controls.Add(this.jwIcon14);
-            this.Controls.Add(this.jwIcon12);
-            this.Controls.Add(this.jwIcon11);
-            this.Controls.Add(this.jwIcon9);
-            this.Controls.Add(this.jwIcon8);
-            this.Controls.Add(this.jwIcon7);
-            this.Controls.Add(this.jwIcon6);
-            this.Controls.Add(this.jwIcon5);
-            this.Controls.Add(this.jwIcon4);
-            this.Controls.Add(this.jwIcon2);
-            this.Controls.Add(this.jwIcon1);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private JwIcon jwIcon1;
-        private JwIcon jwIcon2;
-        private JwIcon jwIcon4;
-        private JwIcon jwIcon5;
-        private JwIcon jwIcon6;
-        private JwIcon jwIcon7;
-        private JwIcon jwIcon8;
-        private JwIcon jwIcon9;
-        private JwIcon jwIcon11;
-        private JwIcon jwIcon12;
-        private JwIcon jwIcon14;
-        private JwSilderBar jwSilderBar1;
-        private JwLabel jwLabel1;
-        private JwSilderBar jwSilderBar2;
-        private JwIcon jwIcon3;
-        private JwIcon jwIcon10;
+
         private JwNavBar jwNavBar1;
         private JwNavBar jwNavBar2;
         private JwNavBar jwNavBar3;
-        private System.Windows.Forms.Label label1;
+        private JwNavBar jwNavBar4;
+        private JwNavBar jwNavBar5;
+        private JwNavBar jwNavBar6;
+        private JwNavBar jwNavBar7;
+        private JwNavBar jwNavBar8;
     }
 }
 

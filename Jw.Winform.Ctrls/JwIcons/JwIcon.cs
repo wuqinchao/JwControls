@@ -485,27 +485,27 @@ namespace Jw.Winform.Ctrls
         }
         private Color GetIconColor()
         {
-            if (!Enabled) return (Theme == ThemeType.none || !JwTheme.ThemeDict.ContainsKey(Theme)) ? IconDisableColor : JwTheme.ThemeDict[Theme].ForeDisableColor;
-            if (isHovered || isPressed || isFocused) return (Theme == ThemeType.none || !JwTheme.ThemeDict.ContainsKey(Theme)) ? IconActiveColor : JwTheme.ThemeDict[Theme].ForeActiveColor;
-            return (Theme == ThemeType.none || !JwTheme.ThemeDict.ContainsKey(Theme)) ? IconColor : JwTheme.ThemeDict[Theme].ForeColor;
+            if (!Enabled) return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? IconDisableColor : JwTheme.JwIconThemeDict[Theme].ForeDisableColor;
+            if (isHovered || isPressed || isFocused) return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? IconActiveColor : JwTheme.JwIconThemeDict[Theme].ForeActiveColor;
+            return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? IconColor : JwTheme.JwIconThemeDict[Theme].ForeColor;
         }
         private Color GetForeColor()
         {
-            if (!Enabled) return (Theme == ThemeType.none || !JwTheme.ThemeDict.ContainsKey(Theme)) ? IconDisableColor : JwTheme.ThemeDict[Theme].ForeDisableColor;
-            if (isHovered || isPressed || isFocused) return (Theme == ThemeType.none || !JwTheme.ThemeDict.ContainsKey(Theme)) ? IconActiveColor : JwTheme.ThemeDict[Theme].ForeActiveColor;
-            return (Theme == ThemeType.none || !JwTheme.ThemeDict.ContainsKey(Theme)) ? IconColor : JwTheme.ThemeDict[Theme].ForeColor;
+            if (!Enabled) return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? IconDisableColor : JwTheme.JwIconThemeDict[Theme].ForeDisableColor;
+            if (isHovered || isPressed || isFocused) return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? IconActiveColor : JwTheme.JwIconThemeDict[Theme].ForeActiveColor;
+            return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? IconColor : JwTheme.JwIconThemeDict[Theme].ForeColor;
         }
         private Color GetBackColor()
         {
-            if (!Enabled) return (Theme == ThemeType.none || !JwTheme.ThemeDict.ContainsKey(Theme)) ? BgDisableColor : JwTheme.ThemeDict[Theme].BackDisableColor;
-            if ((isHovered || isPressed || isFocused) && ShowFocused) return (Theme == ThemeType.none || !JwTheme.ThemeDict.ContainsKey(Theme)) ? BgActiveColor : JwTheme.ThemeDict[Theme].BackActiveColor;
-            return (Theme == ThemeType.none || !JwTheme.ThemeDict.ContainsKey(Theme)) ? BgColor : JwTheme.ThemeDict[Theme].BackColor;
+            if (!Enabled) return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? BgDisableColor : JwTheme.JwIconThemeDict[Theme].BackDisableColor;
+            if ((isHovered || isPressed || isFocused) && ShowFocused) return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? BgActiveColor : JwTheme.JwIconThemeDict[Theme].BackActiveColor;
+            return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? BgColor : JwTheme.JwIconThemeDict[Theme].BackColor;
         }
         private Color GetBordColor()
         {
-            if (!Enabled) return (Theme == ThemeType.none || !JwTheme.ThemeDict.ContainsKey(Theme)) ? BorderDisableColor : JwTheme.ThemeDict[Theme].BordDisableColor;
-            if (isHovered || isPressed || isFocused) return (Theme == ThemeType.none || !JwTheme.ThemeDict.ContainsKey(Theme)) ? BorderActiveColor : JwTheme.ThemeDict[Theme].BordActiveColor;
-            return (Theme == ThemeType.none || !JwTheme.ThemeDict.ContainsKey(Theme)) ? BorderColor : JwTheme.ThemeDict[Theme].BordColor;
+            if (!Enabled) return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? BorderDisableColor : JwTheme.JwIconThemeDict[Theme].BordDisableColor;
+            if (isHovered || isPressed || isFocused) return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? BorderActiveColor : JwTheme.JwIconThemeDict[Theme].BordActiveColor;
+            return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? BorderColor : JwTheme.JwIconThemeDict[Theme].BordColor;
         } 
 
         #region Focus Methods

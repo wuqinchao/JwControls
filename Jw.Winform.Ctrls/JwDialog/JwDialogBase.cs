@@ -171,15 +171,15 @@ namespace Jw.Winform.Ctrls
         }
         private Color GetBordColor()
         {
-            if (!Enabled) return JwTheme.ThemeDict[Theme].BordDisableColor;
-            if (this.Focused) return JwTheme.ThemeDict[Theme].BordActiveColor;
-            return JwTheme.ThemeDict[Theme].BordColor;
+            if (!Enabled) return JwTheme.JwIconThemeDict[Theme].BordDisableColor;
+            if (this.Focused) return JwTheme.JwIconThemeDict[Theme].BordActiveColor;
+            return JwTheme.JwIconThemeDict[Theme].BordColor;
         }
         private Color GetBackColor()
         {
-            if (!Enabled) return JwTheme.ThemeDict[Theme].BackDisableColor;
-            if (this.Focused) return JwTheme.ThemeDict[Theme].BackActiveColor;
-            return JwTheme.ThemeDict[Theme].BackColor;
+            if (!Enabled) return JwTheme.JwIconThemeDict[Theme].BackDisableColor;
+            if (this.Focused) return JwTheme.JwIconThemeDict[Theme].BackActiveColor;
+            return JwTheme.JwIconThemeDict[Theme].BackColor;
         }
         protected override void OnPaint(PaintEventArgs e)
         {
