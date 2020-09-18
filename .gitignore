@@ -1,9 +1,9 @@
-Jw.Winform.Ctrls/bin
-Jw.Winform.Ctrls/obj
-Jw.Winform.Ctrls.Test/bin
-Jw.Winform.Ctrls.Test/obj
-Jw.Share/bin
-Jw.Share/obj
+Jw.Winform.Ctrls/bin/
+Jw.Winform.Ctrls/obj/
+Jw.Winform.Ctrls.Test/bin/
+Jw.Winform.Ctrls.Test/obj/
+Jw.Share/bin/
+Jw.Share/obj/
 .vs/
 *.cache
 .vs/Jw/v16/.suo
