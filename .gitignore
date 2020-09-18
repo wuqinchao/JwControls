@@ -7,3 +7,9 @@ Jw.Share/obj/
 .vs/
 *.cache
 .vs/Jw/v16/.suo
+obj
+bin
+/Jw.Winform.Ctrls/*.user
+output
+Release
+.vs
