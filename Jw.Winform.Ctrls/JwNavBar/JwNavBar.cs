@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Design;
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
 using System.Linq;
@@ -13,8 +14,8 @@ using System.Windows.Forms;
 
 namespace Jw.Winform.Ctrls
 {
-    //[Designer("Jw.Winform.Ctrls.JwNavBarDesigner")]
-    public partial class JwNavBar : TreeView
+    [Designer("Jw.Winform.Ctrls.JwNavbarDesigner")]
+    public class JwNavbar : TreeView, IIconfont, IJwTheme
     {
         private int _NodeHeight = 40;
         private Padding _NodePadding = new Padding(10, 0, 5, 0);
@@ -25,23 +26,34 @@ namespace Jw.Winform.Ctrls
         private string _IconExpand = "arrow3-down";
         private string _IconContract = "arrow3-up";
         private string _IconChild = "arrow6-right"; 
-        private ThemeType _Theme = ThemeType.dark;
-        private const int GWL_STYLE = -16;
-        private const int WS_VSCROLL = 0x00200000;
-        private const int WM_ERASEBKGND = 0x0014;
+        private ThemeType _Theme = ThemeType.Dark;
+        //private const int GWL_STYLE = -16;
+        private string _IconFontName = JwIconfontManager.DefaultFont;
 
-        [Description("配色方案"), Category("JwNavBar")]
-        public ThemeType Theme { get => _Theme; set => _Theme = value; }
-        [Description("结点高度"), Category("JwNavBar")]
+        [Description("配色方案"), Category("JwNavbar")]
+        public ThemeType Theme
+        {
+            get => _Theme;
+            set
+            {
+                if (_Theme == value) return;
+                _Theme = value;
+                this.BackColor = ThemePrivate.Normal.TopNodeBack;
+                Refresh();
+            }
+        }
+        [Description("结点高度"), Category("JwNavbar")]
         public int NodeHeight
         {
             get => _NodeHeight;
             set
             {
+                if (base.ItemHeight == value) return;
                 base.ItemHeight = _NodeHeight = value;
+                Refresh();
             }
         }
-        [Description("结点Padding"), Category("JwNavBar")]
+        [Description("结点Padding"), Category("JwNavbar")]
         public Padding NodePadding 
         { 
             get => _NodePadding;
@@ -51,7 +63,7 @@ namespace Jw.Winform.Ctrls
                 Refresh();
             }
         }
-        [Description("主结点图标大小"), Category("JwNavBar.TopNode")]
+        [Description("主结点图标大小"), Category("JwNavbar.TopNode")]
         public int IconTopSize
         {
             get => _IconTopSize;
@@ -62,7 +74,7 @@ namespace Jw.Winform.Ctrls
                 Refresh();
             }
         }
-        [Description("主结点图标与上边距离微调"), Category("JwNavBar.TopNode")]
+        [Description("主结点图标与上边距离微调"), Category("JwNavbar.TopNode")]
         public int AdjustTopIconTop
         {
             get => _AdjustTopIconTop;
@@ -72,7 +84,8 @@ namespace Jw.Winform.Ctrls
                 Refresh();
             }
         }
-        [Description("展开时的图标"), Category("JwNavBar.TopNode")]
+        [Description("展开时的图标"), Category("JwNavbar.TopNode")]
+        [Editor(typeof(JwIconSelectionEditor), typeof(System.Drawing.Design.UITypeEditor))]
         public string IconExpand 
         { 
             get => _IconExpand;
@@ -82,7 +95,8 @@ namespace Jw.Winform.Ctrls
                 Refresh();
             }
         }
-        [Description("折叠时的图标"), Category("JwNavBar.TopNode")]
+        [Description("折叠时的图标"), Category("JwNavbar.TopNode")]
+        [Editor(typeof(JwIconSelectionEditor), typeof(System.Drawing.Design.UITypeEditor))]
         public string IconContract 
         { 
             get => _IconContract;
@@ -92,7 +106,7 @@ namespace Jw.Winform.Ctrls
                 Refresh();
             }
         }
-        [Description("子结点图标大小"), Category("JwNavBar.ChildNode")]
+        [Description("子结点图标大小"), Category("JwNavbar.ChildNode")]
         public int IconChildSize
         {
             get => _IconChildSize;
@@ -103,7 +117,7 @@ namespace Jw.Winform.Ctrls
                 Refresh();
             }
         }
-        [Description("子结点图标与上边距离微调"), Category("JwNavBar.ChildNode")]
+        [Description("子结点图标与上边距离微调"), Category("JwNavbar.ChildNode")]
         public int AdjustChildIconTop
         {
             get => _AdjustChildIconTop;
@@ -113,7 +127,8 @@ namespace Jw.Winform.Ctrls
                 Refresh();
             }
         }
-        [Description("子结点图标"), Category("JwNavBar.ChildNode")]
+        [Editor(typeof(JwIconSelectionEditor), typeof(System.Drawing.Design.UITypeEditor))]
+        [Description("子结点图标"), Category("JwNavbar.ChildNode")]
         public string IconChild
         { 
             get => _IconChild;
@@ -123,7 +138,18 @@ namespace Jw.Winform.Ctrls
                 Refresh();
             }
         }
-        public JwNavBar()
+        [Editor(typeof(JwFontSelectionEditor), typeof(UITypeEditor))]
+        [Description("使用图标字体的名称(注册时的名称)"), Category("JwNavbar")]
+        public string IconFontName
+        {
+            get => _IconFontName;
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value) || !JwIconfontManager.ContainsFont(value)) return;
+                _IconFontName = value;
+            }
+        }
+        public JwNavbar()
         {
             base.HideSelection = false;
             base.ItemHeight = NodeHeight;
@@ -135,134 +161,144 @@ namespace Jw.Winform.Ctrls
             base.ShowLines = false;
             base.ShowPlusMinus = false;
             base.ShowRootLines = false;
-            this.BackColor = _ThemePrivate.Normal.Back;
+            this.BackColor = ThemePrivate.Normal.Back;
             this.BorderStyle = BorderStyle.None;
+            this.BackColor = ThemePrivate.Normal.TopNodeBack;
             DoubleBuffered = true;
             Font = new System.Drawing.Font("微软雅黑", 9F, FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
         }
 
+        #region custom theme
         private JwNavbarThemeStatus CustomTheme = new JwNavbarThemeStatus()
         {
             Normal = new JwNavbarThemeInfo()
             {
-                BackHex = "#282828",
-                TopNodeBackHex = "#282828",
-                TopNodeBorderHex = "#232323",
-                TopNodeForeHex = "#999999",
-                ClildNodeBackHex = "#eeeeee",
-                ChildNodeIconHex = "#bebebe",
-                ChildNodeForeHex = "#333333",
-                ChildNodeBorderHex = "#dddddd",
+                Back = "#282828".HexToColor(),
+                TopNodeBack = "#282828".HexToColor(),
+                TopNodeBorder = "#232323".HexToColor(),
+                TopNodeFore = "#999999".HexToColor(),
+                ClildNodeBack = "#eeeeee".HexToColor(),
+                ChildNodeIcon = "#bebebe".HexToColor(),
+                ChildNodeFore = "#333333".HexToColor(),
+                ChildNodeBorder = "#dddddd".HexToColor(),
             },
             Active = new JwNavbarThemeInfo()
             {
-                BackHex = "#282828",
-                TopNodeBackHex = "#2c2c2c",
-                TopNodeBorderHex = "#232323",
-                TopNodeForeHex = "#ffffff",
-                ClildNodeBackHex = "#ffffff",
-                ChildNodeIconHex = "#bebebe",
-                ChildNodeForeHex = "#333333",
-                ChildNodeBorderHex = "#dddddd",
+                Back = "#282828".HexToColor(),
+                TopNodeBack = "#2c2c2c".HexToColor(),
+                TopNodeBorder = "#232323".HexToColor(),
+                TopNodeFore = "#ffffff".HexToColor(),
+                ClildNodeBack = "#ffffff".HexToColor(),
+                ChildNodeIcon = "#bebebe".HexToColor(),
+                ChildNodeFore = "#333333".HexToColor(),
+                ChildNodeBorder = "#dddddd".HexToColor(),
             }
         };
 
-        [Description("背景颜色"), Category("JwNavBar.Theme.Normal")]
+        [Description("背景颜色"), Category("JwNavbar.Theme.Normal")]
         public Color Backgound
         {
             get => CustomTheme.Normal.Back;
-            set { CustomTheme.Normal.Back = value; if (Theme == ThemeType.none) Refresh(); }
+            set { 
+                CustomTheme.Normal.Back = value;
+                if (Theme == ThemeType.None)
+                {
+                    this.BackColor = ThemePrivate.Normal.TopNodeBack;
+                    Refresh();
+                }
+            }
         }
-        [Description("主结点背景颜色"), Category("JwNavBar.Theme.Normal")]
+        [Description("主结点背景颜色"), Category("JwNavbar.Theme.Normal")]
         public Color TopNodeBackgound
         {
             get => CustomTheme.Normal.TopNodeBack;
-            set { CustomTheme.Normal.TopNodeBack = value; if (Theme == ThemeType.none) Refresh(); }
+            set { CustomTheme.Normal.TopNodeBack = value; if (Theme == ThemeType.None) Refresh(); }
         }
-        [Description("主结点边框颜色"), Category("JwNavBar.Theme.Normal")]
+        [Description("主结点边框颜色"), Category("JwNavbar.Theme.Normal")]
         public Color TopNodeBorderColor
         {
             get => CustomTheme.Normal.TopNodeBorder;
-            set { CustomTheme.Normal.TopNodeBorder = value; if (Theme == ThemeType.none) Refresh(); }
+            set { CustomTheme.Normal.TopNodeBorder = value; if (Theme == ThemeType.None) Refresh(); }
         }
-        [Description("主结点文字及图标颜色"), Category("JwNavBar.Theme.Normal")]
+        [Description("主结点文字及图标颜色"), Category("JwNavbar.Theme.Normal")]
         public Color TopNodeForeColor
         {
             get => CustomTheme.Normal.TopNodeFore;
-            set { CustomTheme.Normal.TopNodeFore = value; if (Theme == ThemeType.none) Refresh(); }
+            set { CustomTheme.Normal.TopNodeFore = value; if (Theme == ThemeType.None) Refresh(); }
         }
-        [Description("子结点背景颜色"), Category("JwNavBar.Theme.Normal")]
+        [Description("子结点背景颜色"), Category("JwNavbar.Theme.Normal")]
         public Color ClildNodeBackgound
         {
             get => CustomTheme.Normal.ClildNodeBack;
-            set { CustomTheme.Normal.ClildNodeBack = value; if (Theme == ThemeType.none) Refresh(); }
+            set { CustomTheme.Normal.ClildNodeBack = value; if (Theme == ThemeType.None) Refresh(); }
         }
-        [Description("子结点文字颜色"), Category("JwNavBar.Theme.Normal")]
+        [Description("子结点文字颜色"), Category("JwNavbar.Theme.Normal")]
         public Color ChildNodeForeColor
         {
             get => CustomTheme.Normal.ChildNodeFore;
-            set { CustomTheme.Normal.ChildNodeFore = value; if (Theme == ThemeType.none) Refresh(); }
+            set { CustomTheme.Normal.ChildNodeFore = value; if (Theme == ThemeType.None) Refresh(); }
         }
-        [Description("子结点边框颜色"), Category("JwNavBar.Theme.Normal")]
+        [Description("子结点边框颜色"), Category("JwNavbar.Theme.Normal")]
         public Color ChildNodeBorderColor
         {
             get => CustomTheme.Normal.ChildNodeBorder;
-            set { CustomTheme.Normal.ChildNodeBorder = value; if (Theme == ThemeType.none) Refresh(); }
+            set { CustomTheme.Normal.ChildNodeBorder = value; if (Theme == ThemeType.None) Refresh(); }
         }
-        [Description("子结点图标颜色"), Category("JwNavBar.Theme.Normal")]
+        [Description("子结点图标颜色"), Category("JwNavbar.Theme.Normal")]
         public Color ChildNodeIconColor
         {
             get => CustomTheme.Normal.ChildNodeIcon;
-            set { CustomTheme.Normal.ChildNodeIcon = value; if (Theme == ThemeType.none) Refresh(); }
+            set { CustomTheme.Normal.ChildNodeIcon = value; if (Theme == ThemeType.None) Refresh(); }
         }
-        [Description("[活动状态时]背景颜色"), Category("JwNavBar.Theme.Active")]
+        [Description("[活动状态时]背景颜色"), Category("JwNavbar.Theme.Active")]
         public Color BackgoundActive
         {
             get => CustomTheme.Active.Back;
-            set { CustomTheme.Active.Back = value; if (Theme == ThemeType.none) Refresh(); }
+            set { CustomTheme.Active.Back = value; if (Theme == ThemeType.None) Refresh(); }
         }
-        [Description("[活动状态时]主结点背景颜色"), Category("JwNavBar.Theme.Active")]
+        [Description("[活动状态时]主结点背景颜色"), Category("JwNavbar.Theme.Active")]
         public Color TopNodeBackgoundActive
         {
             get => CustomTheme.Active.TopNodeBack;
-            set { CustomTheme.Active.TopNodeBack = value; if (Theme == ThemeType.none) Refresh(); }
+            set { CustomTheme.Active.TopNodeBack = value; if (Theme == ThemeType.None) Refresh(); }
         }
-        [Description("[活动状态时]主结点边框颜色"), Category("JwNavBar.Theme.Active")]
+        [Description("[活动状态时]主结点边框颜色"), Category("JwNavbar.Theme.Active")]
         public Color TopNodeBorderColorActive
         {
             get => CustomTheme.Active.TopNodeBorder;
-            set { CustomTheme.Active.TopNodeBorder = value; if (Theme == ThemeType.none) Refresh(); }
+            set { CustomTheme.Active.TopNodeBorder = value; if (Theme == ThemeType.None) Refresh(); }
         }
-        [Description("[活动状态时]主结点文字及图标颜色"), Category("JwNavBar.Theme.Active")]
+        [Description("[活动状态时]主结点文字及图标颜色"), Category("JwNavbar.Theme.Active")]
         public Color TopNodeForeColorActive
         {
             get => CustomTheme.Active.TopNodeFore;
-            set { CustomTheme.Active.TopNodeFore = value; if (Theme == ThemeType.none) Refresh(); }
+            set { CustomTheme.Active.TopNodeFore = value; if (Theme == ThemeType.None) Refresh(); }
         }
-        [Description("[活动状态时]子结点背景颜色"), Category("JwNavBar.Theme.Active")]
+        [Description("[活动状态时]子结点背景颜色"), Category("JwNavbar.Theme.Active")]
         public Color ClildNodeBackgoundActive
         {
             get => CustomTheme.Active.ClildNodeBack;
-            set { CustomTheme.Active.ClildNodeBack = value; if (Theme == ThemeType.none) Refresh(); }
+            set { CustomTheme.Active.ClildNodeBack = value; if (Theme == ThemeType.None) Refresh(); }
         }
-        [Description("[活动状态时]子结点文字颜色"), Category("JwNavBar.Theme.Active")]
+        [Description("[活动状态时]子结点文字颜色"), Category("JwNavbar.Theme.Active")]
         public Color ChildNodeForeColorActive
         {
             get => CustomTheme.Active.ChildNodeFore;
-            set { CustomTheme.Active.ChildNodeFore = value; if (Theme == ThemeType.none) Refresh(); }
+            set { CustomTheme.Active.ChildNodeFore = value; if (Theme == ThemeType.None) Refresh(); }
         }
-        [Description("[活动状态时]子结点边框颜色"), Category("JwNavBar.Theme.Active")]
+        [Description("[活动状态时]子结点边框颜色"), Category("JwNavbar.Theme.Active")]
         public Color ChildNodeBorderColorActive
         {
             get => CustomTheme.Active.ChildNodeBorder;
-            set { CustomTheme.Active.ChildNodeBorder = value; if (Theme == ThemeType.none) Refresh(); }
+            set { CustomTheme.Active.ChildNodeBorder = value; if (Theme == ThemeType.None) Refresh(); }
         }
-        [Description("[活动状态时]子结点图标颜色"), Category("JwNavBar.Theme.Active")]
+        [Description("[活动状态时]子结点图标颜色"), Category("JwNavbar.Theme.Active")]
         public Color ChildNodeIconColorActive
         {
             get => CustomTheme.Active.ChildNodeIcon;
-            set { CustomTheme.Active.ChildNodeIcon = value; if (Theme == ThemeType.none) Refresh(); }
+            set { CustomTheme.Active.ChildNodeIcon = value; if (Theme == ThemeType.None) Refresh(); }
         }
+        #endregion
         //private TreeNode _MouseNode = null;
         //protected override void OnMouseHover(EventArgs e)
         //{
@@ -281,15 +317,15 @@ namespace Jw.Winform.Ctrls
         //}
         protected override void WndProc(ref Message m)
         {
-            if (m.Msg == WM_ERASEBKGND) return;
+            if (m.Msg == (uint)WinApi.Messages.WM_ERASEBKGND) return;
             base.WndProc(ref m);
         }
         private string RealIconChild
         {
             get
             {
-                if (!string.IsNullOrEmpty(IconChild) && Iconfont.TypeDict.ContainsKey(IconChild))
-                    return Iconfont.TypeDict[IconChild];
+                if (!string.IsNullOrEmpty(IconChild) && JwIconfontManager.ContainsIcon(IconChild, IconFontName))
+                    return JwIconfontManager.GetFontIcon(IconChild, IconFontName);
                 else
                     return string.Empty;
             }
@@ -298,8 +334,8 @@ namespace Jw.Winform.Ctrls
         {
             get
             {
-                if (!string.IsNullOrEmpty(IconExpand) && Iconfont.TypeDict.ContainsKey(IconExpand))
-                    return Iconfont.TypeDict[IconExpand];
+                if (!string.IsNullOrEmpty(IconExpand) && JwIconfontManager.ContainsIcon(IconExpand, IconFontName))
+                    return JwIconfontManager.GetFontIcon(IconExpand, IconFontName);
                 else
                     return string.Empty;
             }
@@ -308,17 +344,11 @@ namespace Jw.Winform.Ctrls
         {
             get
             {
-                if (!string.IsNullOrEmpty(IconContract) && Iconfont.TypeDict.ContainsKey(IconContract))
-                    return Iconfont.TypeDict[IconContract];
+                if (!string.IsNullOrEmpty(IconContract) && JwIconfontManager.ContainsIcon(IconContract, IconFontName))
+                    return JwIconfontManager.GetFontIcon(IconContract, IconFontName);
                 else
                     return string.Empty;
             }
-        }
-        private Font GetIconFont(int insize)
-        {
-            var size = insize * (3f / 4f);
-            var font = new Font(Iconfont.Family, insize, FontStyle.Regular, GraphicsUnit.Point);
-            return font;
         }
         private void NavBarSizeChanged(object sender, EventArgs e)
         {
@@ -368,11 +398,9 @@ namespace Jw.Winform.Ctrls
                 NavBarDrawChildNode(e);
             }
         }
-        [DllImport("user32", CharSet = CharSet.Auto)]
-        private static extern int GetWindowLong(IntPtr hwnd, int nIndex);
         private bool IsVerticalScrollBarVisible()
         {
-            return base.IsHandleCreated && (GetWindowLong(base.Handle, GWL_STYLE) & WS_VSCROLL) != 0;
+            return base.IsHandleCreated && (WinApi.GetWindowLong(base.Handle, WinApi.GWL_STYLE) & (uint)WinApi.WinStyle.WS_VSCROLL) != 0;
         }
         private bool IsMouseIn(TreeNode node)
         {
@@ -380,11 +408,11 @@ namespace Jw.Winform.Ctrls
             if (hit.Node == null) return false;
             return hit.Node.Equals(node);
         }
-        private JwNavbarThemeStatus _ThemePrivate
+        public JwNavbarThemeStatus ThemePrivate
         {
             get
             {
-                if(Theme!= ThemeType.none)
+                if(Theme!= ThemeType.None)
                 {
                     return JwTheme.JwNavbarThemeDict[Theme];
                 }
@@ -396,17 +424,12 @@ namespace Jw.Winform.Ctrls
         }
         private void NavBarDrawTopNode(DrawTreeNodeEventArgs e)
         {
-            var g = e.Graphics;
+            var g = e.Graphics.HighQuality();
 
-            g.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
-            g.InterpolationMode = InterpolationMode.HighQualityBilinear;
-            g.PixelOffsetMode =   PixelOffsetMode.HighQuality;
-            g.SmoothingMode =     SmoothingMode.HighQuality;
-
-            var theme = _ThemePrivate.Normal;
+            var theme = ThemePrivate.Normal;
             if (e.State == TreeNodeStates.Selected || e.State == TreeNodeStates.Focused || IsMouseIn(e.Node))
             {
-                theme = _ThemePrivate.Active;
+                theme = ThemePrivate.Active;
             }
 
             var scrollbar = IsVerticalScrollBarVisible() ? 20 : 0;
@@ -424,7 +447,7 @@ namespace Jw.Winform.Ctrls
             // 图标
             if (e.Node.Nodes.Count > 0)
             {
-                using (var font = GetIconFont(IconTopSize))
+                using (var font = JwIconfontManager.GetIconFont(IconFontName, IconTopSize))
                 {
                     var iconSize = g.MeasureString(e.Node.IsExpanded ? RealIconContract : RealIconExpand, font, int.MaxValue, StringFormat.GenericTypographic);
                     var iconRect = new RectangleF(new PointF(drawRect.X + drawRect.Width - iconSize.Width, drawRect.Y + (drawRect.Height - iconSize.Height) / 2f + AdjustTopIconTop), iconSize);
@@ -454,16 +477,12 @@ namespace Jw.Winform.Ctrls
         }
         private void NavBarDrawChildNode(DrawTreeNodeEventArgs e)
         {
-            var g = e.Graphics;
-            g.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
-            g.InterpolationMode = InterpolationMode.HighQualityBilinear;
-            g.PixelOffsetMode = PixelOffsetMode.HighQuality;
-            g.SmoothingMode = SmoothingMode.HighQuality;
+            var g = e.Graphics.HighQuality();
 
-            var theme = _ThemePrivate.Normal;
+            var theme = ThemePrivate.Normal;
             if(e.State == TreeNodeStates.Selected || e.State == TreeNodeStates.Focused || IsMouseIn(e.Node))
             {
-                theme = _ThemePrivate.Active;
+                theme = ThemePrivate.Active;
             }
 
             var scrollbar = IsVerticalScrollBarVisible() ? 20 : 0;
@@ -479,7 +498,7 @@ namespace Jw.Winform.Ctrls
                 g.FillRectangle(bgBrush, nodeRect);
             }
             // 图标
-            using (var font = GetIconFont(IconChildSize))
+            using (var font = JwIconfontManager.GetIconFont(IconFontName, IconChildSize))
             {
                 g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
                 var iconSize = g.MeasureString(RealIconChild, font, int.MaxValue, StringFormat.GenericTypographic);
@@ -494,7 +513,7 @@ namespace Jw.Winform.Ctrls
                 using (var foreBrush = new SolidBrush(theme.ChildNodeFore))
                 {
                     g.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
-                    g.DrawString(e.Node.Text,   Font, foreBrush, textRect, StringFormat.GenericTypographic);
+                    g.DrawString(e.Node.Text, Font, foreBrush, textRect, StringFormat.GenericTypographic);
                 }
             }
             // 边框

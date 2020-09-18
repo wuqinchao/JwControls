@@ -10,14 +10,33 @@ namespace Jw.Winform.Ctrls
 {
     public static class JwTheme
     {
-        public static Dictionary<ThemeType, JwIconThemeItem> JwIconThemeDict
+        public static Dictionary<ThemeType, JwLabelThemeStatus> JwLabelThemeDict
+        {
+            get => JwLabelTheme.ThemeDict;
+        }
+        public static Dictionary<ThemeType, JwCommonThemeStatus> JwCommonThemeDict
+        {
+            get => JwCommonTheme.ThemeDict;
+        }
+        public static Dictionary<ThemeType, JwSilderBarThemeStatus> JwSilderBarThemeDict
+        {
+            get => JwSilderBarTheme.ThemeDict;
+        }
+        public static Dictionary<ThemeType, JwIconThemeStatus> JwIconThemeDict
         {
             get => JwIconTheme.ThemeDict;
         }
-
+        public static Dictionary<ThemeType, JwButtonThemeStatus> JwButtonThemeDict
+        {
+            get => JwButtonTheme.ThemeDict;
+        }
         public static Dictionary<ThemeType, JwNavbarThemeStatus> JwNavbarThemeDict
         {
             get => JwNavbarTheme.ThemeDict;
+        }
+        public static Dictionary<ThemeType, JwDialogThemeStatus> JwDialogThemeDict
+        {
+            get => JwDialogTheme.ThemeDict;
         }
 
         static JwTheme()

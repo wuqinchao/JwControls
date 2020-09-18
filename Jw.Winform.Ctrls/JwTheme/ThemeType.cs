@@ -8,14 +8,14 @@ namespace Jw.Winform.Ctrls
 {
     public enum ThemeType
     {
-        none,
-        primary,
-        secondary,
-        success,
-        danger,
-        warning,
-        info,
-        light,
-        dark,
+        None,
+        Primary,
+        Secondary,
+        Success,
+        Danger,
+        Warning,
+        Info,
+        Light,
+        Dark,
     }
 }

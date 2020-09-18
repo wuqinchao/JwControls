@@ -1,0 +1,9 @@
+D:\GitHub\Jw\Jw.Windows\bin\Debug\Jw.Windows.dll
+D:\GitHub\Jw\Jw.Windows\bin\Debug\Jw.Windows.pdb
+D:\GitHub\Jw\Jw.Windows\bin\Debug\Jw.Share.dll
+D:\GitHub\Jw\Jw.Windows\bin\Debug\Jw.Share.pdb
+D:\GitHub\Jw\Jw.Windows\obj\Debug\Jw.Windows.csprojAssemblyReference.cache
+D:\GitHub\Jw\Jw.Windows\obj\Debug\Jw.Windows.csproj.CoreCompileInputs.cache
+D:\GitHub\Jw\Jw.Windows\obj\Debug\Jw.Windows.csproj.CopyComplete
+D:\GitHub\Jw\Jw.Windows\obj\Debug\Jw.Windows.dll
+D:\GitHub\Jw\Jw.Windows\obj\Debug\Jw.Windows.pdb

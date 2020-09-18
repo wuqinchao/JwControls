@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Jw.Winform.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace Jw.Winform.Ctrls.Test
 {
     public partial class Form1 : Form
     {
+        //JwMdiTabbed mdi = null;
         public Form1()
         {
             InitializeComponent();
+            //mdi = new JwMdiTabbed();
+            //mdi.MdiParent = this;
         }
 
         private void jwIcon1_Click(object sender, EventArgs e)
@@ -22,27 +26,29 @@ namespace Jw.Winform.Ctrls.Test
             MessageBox.Show("OK");
         }
 
-        private void jwIcon5_Click(object sender, EventArgs e)
-        {
-            var f = new JwIcons.IconSelection();
-            if(f.ShowDialog() == DialogResult.OK)
-            {
-                Clipboard.SetText(f.SelectKey);
-                MessageBox.Show(f.SelectKey);
-            }
-        }
-
         private void jwIcon3_Click(object sender, EventArgs e)
         {
-            JwDialog.AlertInfo("是不是发生的什么错误");
-            JwDialog.AlertSucc("是不是发生的什么错误");
-            JwDialog.AlertWarning("是不是发生的什么错误");
-            JwDialog.AlertError("是不是发生的什么错误");
+            JwAlert.Info("是不是发生的什么错误");
+            JwAlert.Succ("是不是发生的什么错误");
+            JwAlert.Warning("是不是发生的什么错误");
+            JwAlert.Error("是不是发生的什么错误");
         }
 
         private void jwIcon10_Click(object sender, EventArgs e)
         {
-            JwDialog.Confirm("??????????????????");
+            JwAlert.Confirm("??????????????????");
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form f = new Form2();
+            f.MdiParent = this;
+            f.Show();
         }
     }
 }

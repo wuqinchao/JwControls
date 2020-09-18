@@ -12,14 +12,17 @@ namespace Jw.Winform.Ctrls.JwIcons
 {
     public partial class IconSelection : Form
     {
-        public IconSelection()
+        private string FontKey;
+        public IconSelection(string font)
         {
+            FontKey = font;
             InitializeComponent();
         }
 
         private void IconSelection_Load(object sender, EventArgs e)
         {
-            foreach(var key in Iconfont.TypeDict.Keys.OrderBy(x=>x))
+            var dict = JwIconfontManager.GetFontInfo(FontKey).IconDict;
+            foreach (var key in dict.Keys.OrderBy(x=>x))
             {
                 var icon = new JwIcon()
                 {
@@ -48,7 +51,7 @@ namespace Jw.Winform.Ctrls.JwIcons
                     Size = new System.Drawing.Size(28, 28),
                     TabIndex = 0,
                     TextMarginLeft = 4,
-                    Theme = Jw.Winform.Ctrls.ThemeType.none,
+                    Theme = Jw.Winform.Ctrls.ThemeType.None,
                 };
 
                 icon.Click += Icon_Click;

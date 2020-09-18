@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A413B3C-8A07-4761-BA6C-D9991E9B7362}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Jw.Winform.Forms</RootNamespace>
+    <AssemblyName>Jw.Winform.Forms</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="JwNotify\JwNotify.cs" />
+    <Compile Include="JwNotify\JwNotifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JwNotify\JwNotifyForm.Designer.cs">
+      <DependentUpon>JwNotifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JwPopup\JwAlert.cs" />
+    <Compile Include="JwPopup\JwAlertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JwPopup\JwAlertForm.Designer.cs">
+      <DependentUpon>JwAlertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JwPopup\JwConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JwPopup\JwConfirmForm.Designer.cs">
+      <DependentUpon>JwConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JwPopup\JwDialogBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JwPopup\JwDialogBase.Designer.cs">
+      <DependentUpon>JwDialogBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JwProgress\FileCopyProgressEvents.cs" />
+    <Compile Include="JwProgress\FileCopyService.cs" />
+    <Compile Include="JwProgress\FilesCopyService.cs" />
+    <Compile Include="JwProgress\FwProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JwProgress\FwProgress.designer.cs">
+      <DependentUpon>FwProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JwProgress\IProgressService.cs" />
+    <Compile Include="JwProgress\ProgressEvents.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="JwNotify\JwNotifyForm.resx">
+      <DependentUpon>JwNotifyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JwPopup\JwAlertForm.resx">
+      <DependentUpon>JwAlertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JwPopup\JwConfirmForm.resx">
+      <DependentUpon>JwConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JwPopup\JwDialogBase.resx">
+      <DependentUpon>JwDialogBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JwProgress\FwProgress.resx">
+      <DependentUpon>FwProgress.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jw.Share\Jw.Share.csproj">
+      <Project>{78fddcff-3aac-4c03-974f-6cb86781616f}</Project>
+      <Name>Jw.Share</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jw.Winform.Ctrls\Jw.Winform.Ctrls.csproj">
+      <Project>{fe89e7a4-4e58-4dd1-9654-86260146cae1}</Project>
+      <Name>Jw.Winform.Ctrls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF EXIST $(SolutionDir)output\$(TargetFileName) DEL $(SolutionDir)output\$(TargetFileName)
+copy $(TargetPath) $(SolutionDir)output\$(TargetFileName)</PostBuildEvent>
+  </PropertyGroup>
+</Project>

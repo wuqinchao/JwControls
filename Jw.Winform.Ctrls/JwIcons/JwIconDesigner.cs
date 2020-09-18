@@ -55,7 +55,7 @@ namespace Jw.Winform.Ctrls
         {
             var icon = (JwIcon)Control;
             var old = icon.IconText;
-            using(var f = new JwIcons.IconSelection())
+            using(var f = new JwIcons.IconSelection(icon.IconFontName))
             {
                 if(f.ShowDialog() == DialogResult.OK)
                 {

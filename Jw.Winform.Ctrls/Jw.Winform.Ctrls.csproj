@@ -45,27 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GdiPlus.cs" />
-    <Compile Include="JwDialog\JwConfirm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="GdiPlus\GdiPlus.cs" />
+    <Compile Include="GdiPlus\GdiPlusCache.cs" />
+    <Compile Include="Iconfont\IIconfont.cs" />
+    <Compile Include="JwButton\JwButton.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="JwDialog\JwConfirm.Designer.cs">
-      <DependentUpon>JwConfirm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="JwDialog\JwAlert.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="JwDialog\JwAlert.Designer.cs">
-      <DependentUpon>JwAlert.cs</DependentUpon>
-    </Compile>
-    <Compile Include="JwDialog\JwDialog.cs" />
-    <Compile Include="JwDialog\JwDialogBase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="JwDialog\JwDialogBase.Designer.cs">
-      <DependentUpon>JwDialogBase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="JwIcons\Iconfont.cs" />
+    <Compile Include="JwButton\JwButtonDesigner.cs" />
+    <Compile Include="Iconfont\JwFontSelectionEditor.cs" />
+    <Compile Include="Iconfont\JwIconSelectionEditor.cs" />
+    <Compile Include="Iconfont\JwIconfontManager.cs" />
     <Compile Include="JwIcons\IconSelection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,16 +65,29 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="JwIcons\JwIconDesigner.cs" />
-    <Compile Include="JwNavBarDesigner.cs" />
-    <Compile Include="JwNavBar\JwNavBar.cs">
+    <Compile Include="JwNavbar\JwNavbarDesigner.cs" />
+    <Compile Include="JwNavbar\JwNavbar.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="JwSilderBar.cs">
+    <Compile Include="JwNavbar\JwNavbarNode.cs" />
+    <Compile Include="JwNavbar\TreeNodeEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JwNavbar\TreeNodeEditor.Designer.cs">
+      <DependentUpon>TreeNodeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JwSilderBar\JwSilderBar.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="JwLabel.cs">
+    <Compile Include="JwLabel\JwLabel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="JwTheme\IJwTheme.cs" />
+    <Compile Include="JwTheme\JwButtonTheme.cs" />
+    <Compile Include="JwTheme\JwDialogTheme.cs" />
+    <Compile Include="JwTheme\JwCommonTheme.cs" />
+    <Compile Include="JwTheme\JwLabelTheme.cs" />
+    <Compile Include="JwTheme\JwSilderBarTheme.cs" />
     <Compile Include="JwTheme\JwIconTheme.cs" />
     <Compile Include="JwTheme\JwNavbarTheme.cs" />
     <Compile Include="JwTheme\JwTheme.cs" />
@@ -96,20 +98,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Native\WinApi.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="JwDialog\JwConfirm.resx">
-      <DependentUpon>JwConfirm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="JwDialog\JwAlert.resx">
-      <DependentUpon>JwAlert.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="JwDialog\JwDialogBase.resx">
-      <DependentUpon>JwDialogBase.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="JwIcons\IconSelection.resx">
       <DependentUpon>IconSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JwNavbar\TreeNodeEditor.resx">
+      <DependentUpon>TreeNodeEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -119,6 +116,18 @@
   <ItemGroup>
     <None Include="Resources\iconfont.ttf" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="JwForm\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jw.Share\Jw.Share.csproj">
+      <Project>{78fddcff-3aac-4c03-974f-6cb86781616f}</Project>
+      <Name>Jw.Share</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF EXIST $(SolutionDir)output\$(TargetFileName) DEL $(SolutionDir)output\$(TargetFileName)
+copy $(TargetPath) $(SolutionDir)output\$(TargetFileName)</PostBuildEvent>
+  </PropertyGroup>
 </Project>

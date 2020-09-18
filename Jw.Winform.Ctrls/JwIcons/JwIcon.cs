@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Design;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Windows.Forms;
@@ -11,7 +12,7 @@ namespace Jw.Winform.Ctrls
     [DefaultEvent("Click")]
     [DefaultProperty("IconText")]
     [Designer("Jw.Winform.Ctrls.JwIconDesigner")]
-    public class JwIcon : Control
+    public class JwIcon : Control, IIconfont, IJwTheme
     {
         public JwIcon()
         {
@@ -36,24 +37,9 @@ namespace Jw.Winform.Ctrls
             SizeChanged += JwIcon_TextChanged;
         }
 
-        private string iconText = Iconfont.TypeDict.Keys.First();
+        private string iconText = JwIconfontManager.GetFontInfo(JwIconfontManager.DefaultFont).IconDict.Keys.First();
         private int _IconSize = 20;
         private bool _CententCenter = true;
-
-        private Color _IconColor = Color.Black;
-        private Color _IconActiveColor = Color.Black;
-        private Color _IconDisableColor = Color.Black;
-
-        private Color _BgColor = Color.Transparent;
-        private Color _BgActiveColor = Color.Transparent;
-        private Color _BgDisableColor = Color.Transparent;
-
-        private Color _ForeActiveColor = Color.Black;
-        private Color _ForeDisableColor = Color.Black;
-
-        private Color _BorderColor = Color.Black;
-        private Color _BorderActiveColor = Color.Black;
-        private Color _BorderDisableColor = Color.Black;
 
         private bool _ShowFocused = true;
 
@@ -68,7 +54,9 @@ namespace Jw.Winform.Ctrls
         private bool isPressed = false;
         private bool isFocused = false;
 
-        private ThemeType _Theme = ThemeType.primary;
+        private string _IconFontName = JwIconfontManager.DefaultFont;
+
+        private ThemeType _Theme = ThemeType.Primary;
 
         public new event EventHandler Click;
 
@@ -110,121 +98,121 @@ namespace Jw.Winform.Ctrls
         [Description("图标颜色,不使用Theme时有效果"), Category("JwIcon")]
         public Color IconColor
         {
-            get => _IconColor;
+            get => CustomTheme.Normal.Fore;
             set
             {
-                if (value == _IconColor) return;
-                _IconColor = value;
+                if (value == CustomTheme.Normal.Fore) return;
+                CustomTheme.Normal.Fore = value;
                 Refresh();
             }
         }
         [Description("激活时图标颜色,不使用Theme时有效果"), Category("JwIcon")]
         public Color IconActiveColor
         {
-            get => _IconActiveColor;
+            get => CustomTheme.Active.Fore;
             set
             {
-                if (value == _IconActiveColor) return;
-                _IconActiveColor = value;
+                if (value == CustomTheme.Active.Fore) return;
+                CustomTheme.Active.Fore = value;
                 Refresh();
             }
         }
         [Description("激活时图标颜色,不使用Theme时有效果"), Category("JwIcon")]
         public Color IconDisableColor
         {
-            get => _IconDisableColor;
+            get => CustomTheme.Disable.Fore;
             set
             {
-                if (value == _IconDisableColor) return;
-                _IconDisableColor = value;
+                if (value == CustomTheme.Disable.Fore) return;
+                CustomTheme.Disable.Fore = value;
                 Refresh();
             }
         }
         [Description("背景颜色,不使用Theme时有效果"), Category("JwIcon")]
         public Color BgColor
         {
-            get => _BgColor;
+            get => CustomTheme.Normal.Back;
             set
             {
-                if (value == _BgColor) return;
-                _BgColor = value;
+                if (value == CustomTheme.Normal.Back) return;
+                CustomTheme.Normal.Back = value;
                 Refresh();
             }
         }
         [Description("激活时背景颜色,不使用Theme时有效果"), Category("JwIcon")]
         public Color BgActiveColor
         {
-            get => _BgActiveColor;
+            get => CustomTheme.Active.Back;
             set
             {
-                if (value == _BgActiveColor) return;
-                _BgActiveColor = value;
+                if (value == CustomTheme.Active.Back) return;
+                CustomTheme.Active.Back = value;
                 Refresh();
             }
         }
         [Description("禁用时背景颜色,不使用Theme时有效果"), Category("JwIcon")]
         public Color BgDisableColor
         {
-            get => _BgDisableColor;
+            get => CustomTheme.Disable.Back;
             set
             {
-                if (value == _BgDisableColor) return;
-                _BgDisableColor = value;
+                if (value == CustomTheme.Disable.Back) return;
+                CustomTheme.Disable.Back = value;
                 Refresh();
             }
         }
         [Description("激活时文字颜色,不使用Theme时有效果"), Category("JwIcon")]
         public Color ForeActiveColor
         {
-            get => _ForeActiveColor;
+            get => CustomTheme.Active.Fore;
             set
             {
-                if (value == _ForeActiveColor) return;
-                _ForeActiveColor = value;
+                if (value == CustomTheme.Active.Fore) return;
+                CustomTheme.Active.Fore = value;
                 Refresh();
             }
         }
         [Description("禁用时文字颜色,不使用Theme时有效果"), Category("JwIcon")]
         public Color ForeDisableColor
         {
-            get => _ForeDisableColor;
+            get => CustomTheme.Disable.Fore;
             set
             {
-                if (value == _ForeDisableColor) return;
-                _ForeDisableColor = value;
+                if (value == CustomTheme.Disable.Fore) return;
+                CustomTheme.Disable.Fore = value;
                 Refresh();
             }
         }
         [Description("边框颜色,不使用Theme时有效果"), Category("JwIcon")]
         public Color BorderColor
         {
-            get => _BorderColor;
+            get => CustomTheme.Normal.Border;
             set
             {
-                if (value == _BorderColor) return;
-                _BorderColor = value;
+                if (value == CustomTheme.Normal.Border) return;
+                CustomTheme.Normal.Border = value;
                 Refresh();
             }
         }
         [Description("激活时边框颜色,不使用Theme时有效果"), Category("JwIcon")]
         public Color BorderActiveColor
         {
-            get => _BorderActiveColor;
+            get => CustomTheme.Active.Border;
             set
             {
-                if (value == _BorderActiveColor) return;
-                _BorderActiveColor = value;
+                if (value == CustomTheme.Active.Border) return;
+                CustomTheme.Active.Border = value;
                 Refresh();
             }
         }
         [Description("禁用时边框颜色,不使用Theme时有效果"), Category("JwIcon")]
         public Color BorderDisableColor
         {
-            get => _BorderDisableColor;
+            get => CustomTheme.Disable.Border;
             set
             {
-                if (value == _BorderDisableColor) return;
-                _BorderDisableColor = value;
+                if (value == CustomTheme.Disable.Border) return;
+                CustomTheme.Disable.Border = value;
                 Refresh();
             }
         }
@@ -239,14 +227,14 @@ namespace Jw.Winform.Ctrls
                 SetSize();
             }
         }
-
+        [Editor(typeof(JwIconSelectionEditor), typeof(UITypeEditor))]
         [Description("图标"), Category("JwIcon")]
         public string IconText
         {
             get => iconText;
             set
             {
-                if (!string.IsNullOrEmpty(value) && !Iconfont.TypeDict.ContainsKey(value)) return;
+                if (!string.IsNullOrEmpty(value) && !JwIconfontManager.ContainsIcon(value, IconFontName)) return;
                 iconText = value;
                 SetSize();
             }
@@ -302,21 +290,26 @@ namespace Jw.Winform.Ctrls
                 SetSize();
             }
         }
+        [Editor(typeof(JwFontSelectionEditor), typeof(UITypeEditor))]
+        [Description("使用图标字体的名称(注册时的名称)"), Category("JwIcon")]
+        public string IconFontName 
+        { 
+            get => _IconFontName;
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value) || !JwIconfontManager.ContainsFont(value)) return;
+                _IconFontName = value;
+            }
+        }
         private string RealText
         {
             get
             {
-                if (!string.IsNullOrEmpty(IconText) && Iconfont.TypeDict.ContainsKey(IconText))
-                    return Iconfont.TypeDict[IconText];
+                if (!string.IsNullOrEmpty(IconText) && JwIconfontManager.ContainsFont(IconFontName) && JwIconfontManager.ContainsIcon(IconText, IconFontName))
+                    return JwIconfontManager.GetFontIcon(IconText, IconFontName);
                 else
                     return string.Empty;
             }
-        }
-        private Font GetIconFont()
-        {
-            var size = IconSize * (3f / 4f);
-            var font = new Font(Iconfont.Family, size, FontStyle.Regular, GraphicsUnit.Point);
-            return font;
         }
         private void SetSize()
         {
@@ -328,8 +321,8 @@ namespace Jw.Winform.Ctrls
             using (var g = CreateGraphics())
             {
                 int w, h, iw, ih, tw = 0, th = 0;
-                InitIconGraphics(g);
-                using (var iconFont = GetIconFont())
+                g.HighQuality();
+                using (var iconFont = JwIconfontManager.GetIconFont(IconFontName, IconSize))
                 {
                     var isize = g.MeasureString(RealText, iconFont, int.MaxValue, StringFormat.GenericTypographic);
                     w = iw = (int)Math.Ceiling(isize.Width);
@@ -358,7 +351,7 @@ namespace Jw.Winform.Ctrls
         }
         private bool ExistIcon
         {
-            get { return !string.IsNullOrEmpty(IconText) && Iconfont.TypeDict.ContainsKey(IconText); }
+            get { return !string.IsNullOrEmpty(IconText) && JwIconfontManager.ContainsIcon(IconText, IconFontName); }
         }
         private float DrawRectWidth
         {
@@ -368,13 +361,25 @@ namespace Jw.Winform.Ctrls
         {
             get { return Size.Height - Padding.Top - Padding.Bottom; }
         }
-        private void InitIconGraphics(Graphics g)
+        private JwIconThemeStatus CustomTheme = new JwIconThemeStatus()
         {
-            //g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
-            g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
-            g.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            Normal = new JwIconThemeInfo() { Back = "#007bff".HexToColor(), Border = "#007bff".HexToColor(), Fore = "#ffffff".HexToColor() },
+            Active = new JwIconThemeInfo() { Back = "#0069d9".HexToColor(), Border = "#0062cc".HexToColor(), Fore = "#ffffff".HexToColor() },
+            Disable = new JwIconThemeInfo() { Back = "#007bff".HexToColor(), Border = "#007bff".HexToColor(), Fore = "#ffffff".HexToColor() },
+        };
+        public JwIconThemeStatus ThemePrivate
+        {
+            get
+            {
+                if (Theme != ThemeType.None)
+                {
+                    return JwTheme.JwIconThemeDict[Theme];
+                }
+                else
+                {
+                    return CustomTheme;
+                }
+            }
         }
         //protected override void OnPaintBackground(PaintEventArgs e)
         //{
@@ -406,21 +411,28 @@ namespace Jw.Winform.Ctrls
             var span = TextMarginLeft;
             var press = isPressed ? 1 : 0;
             var g = e.Graphics;
-            InitIconGraphics(g);
-
-            if(!ExistIcon || !ExistText) span = 0;
+            g.HighQuality();
+            var theme = ThemePrivate.Normal;
+            if (!Enabled)
+            {
+                theme = ThemePrivate.Disable;
+            }
+            else if(isHovered || isPressed || isFocused)
+            {
+                theme = ThemePrivate.Active;
+            }
+            if (!ExistIcon || !ExistText) span = 0;
             if (ExistText) textSize = g.MeasureString(Text, this.Font, int.MaxValue, StringFormat.GenericTypographic);
             // 背景
-            var backColor = GetBackColor();
-            if (backColor.A == 255 && BackgroundImage == null)
+            if (theme.Back.A == 255 && BackgroundImage == null)
             {
                 if (Radius < 1)
                 {
-                    e.Graphics.Clear(backColor);
+                    e.Graphics.Clear(theme.Back);
                 }
                 else
                 {
-                    using (var brush = new SolidBrush(backColor))
+                    using (var brush = new SolidBrush(theme.Back))
                     {
                         e.Graphics.FillPath(brush, GdiPlus.RoundedRectPath(ClientRectangle, Radius));
                     }
@@ -431,14 +443,14 @@ namespace Jw.Winform.Ctrls
             {
                 if (Radius < 1)
                 {
-                    using (var pen = new Pen(GetBordColor(), BorderWidth))
+                    using (var pen = new Pen(theme.Border, BorderWidth))
                     {
                         g.DrawRectangle(pen, 0, 0, this.Size.Width, this.Size.Height);
                     }
                 }
                 else
                 {
-                    using (var pen = new Pen(GetBordColor(), BorderWidth))
+                    using (var pen = new Pen(theme.Border, BorderWidth))
                     {
                         g.DrawPath(pen, GdiPlus.RoundedRectPath(ClientRectangle, Radius));
                     }
@@ -447,10 +459,10 @@ namespace Jw.Winform.Ctrls
             // 图标
             if (ExistIcon)
             {
-                using (var font = GetIconFont())
+                using (var font = JwIconfontManager.GetIconFont(IconFontName, IconSize))
                 {
                     iconSize = g.MeasureString(RealText, font, int.MaxValue, StringFormat.GenericTypographic);
-                    using (var brush = new SolidBrush(GetIconColor()))
+                    using (var brush = new SolidBrush(theme.Fore))
                     {
                         if (CententCenter)
                         {
@@ -467,7 +479,7 @@ namespace Jw.Winform.Ctrls
             if (ExistText)
             {
                 g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-                using (var tbrush = new SolidBrush(GetForeColor()))
+                using (var tbrush = new SolidBrush(theme.Fore))
                 {
                     if (CententCenter)
                     {
@@ -483,30 +495,30 @@ namespace Jw.Winform.Ctrls
             if (ShowFocused && isFocused)
                 ControlPaint.DrawFocusRectangle(e.Graphics, ClientRectangle);
         }
-        private Color GetIconColor()
-        {
-            if (!Enabled) return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? IconDisableColor : JwTheme.JwIconThemeDict[Theme].ForeDisableColor;
-            if (isHovered || isPressed || isFocused) return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? IconActiveColor : JwTheme.JwIconThemeDict[Theme].ForeActiveColor;
-            return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? IconColor : JwTheme.JwIconThemeDict[Theme].ForeColor;
-        }
-        private Color GetForeColor()
-        {
-            if (!Enabled) return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? IconDisableColor : JwTheme.JwIconThemeDict[Theme].ForeDisableColor;
-            if (isHovered || isPressed || isFocused) return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? IconActiveColor : JwTheme.JwIconThemeDict[Theme].ForeActiveColor;
-            return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? IconColor : JwTheme.JwIconThemeDict[Theme].ForeColor;
-        }
-        private Color GetBackColor()
-        {
-            if (!Enabled) return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? BgDisableColor : JwTheme.JwIconThemeDict[Theme].BackDisableColor;
-            if ((isHovered || isPressed || isFocused) && ShowFocused) return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? BgActiveColor : JwTheme.JwIconThemeDict[Theme].BackActiveColor;
-            return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? BgColor : JwTheme.JwIconThemeDict[Theme].BackColor;
-        }
-        private Color GetBordColor()
-        {
-            if (!Enabled) return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? BorderDisableColor : JwTheme.JwIconThemeDict[Theme].BordDisableColor;
-            if (isHovered || isPressed || isFocused) return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? BorderActiveColor : JwTheme.JwIconThemeDict[Theme].BordActiveColor;
-            return (Theme == ThemeType.none || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? BorderColor : JwTheme.JwIconThemeDict[Theme].BordColor;
-        } 
+        //private Color GetIconColor()
+        //{
+        //    if (!Enabled) return (Theme == ThemeType.None || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? CustomTheme : JwTheme.JwIconThemeDict[Theme].ForeDisableColor;
+        //    if (isHovered || isPressed || isFocused) return (Theme == ThemeType.None || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? IconActiveColor : JwTheme.JwIconThemeDict[Theme].ForeActiveColor;
+        //    return (Theme == ThemeType.None || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? IconColor : JwTheme.JwIconThemeDict[Theme].ForeColor;
+        //}
+        //private Color GetForeColor()
+        //{
+        //    if (!Enabled) return (Theme == ThemeType.None || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? IconDisableColor : JwTheme.JwIconThemeDict[Theme].ForeDisableColor;
+        //    if (isHovered || isPressed || isFocused) return (Theme == ThemeType.None || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? IconActiveColor : JwTheme.JwIconThemeDict[Theme].ForeActiveColor;
+        //    return (Theme == ThemeType.None || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? IconColor : JwTheme.JwIconThemeDict[Theme].ForeColor;
+        //}
+        //private Color GetBackColor()
+        //{
+        //    if (!Enabled) return (Theme == ThemeType.None || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? BgDisableColor : JwTheme.JwIconThemeDict[Theme].BackDisableColor;
+        //    if ((isHovered || isPressed || isFocused) && ShowFocused) return (Theme == ThemeType.None || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? BgActiveColor : JwTheme.JwIconThemeDict[Theme].BackActiveColor;
+        //    return (Theme == ThemeType.None || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? BgColor : JwTheme.JwIconThemeDict[Theme].BackColor;
+        //}
+        //private Color GetBordColor()
+        //{
+        //    if (!Enabled) return (Theme == ThemeType.None || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? BorderDisableColor : JwTheme.JwIconThemeDict[Theme].BordDisableColor;
+        //    if (isHovered || isPressed || isFocused) return (Theme == ThemeType.None || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? BorderActiveColor : JwTheme.JwIconThemeDict[Theme].BordActiveColor;
+        //    return (Theme == ThemeType.None || !JwTheme.JwIconThemeDict.ContainsKey(Theme)) ? BorderColor : JwTheme.JwIconThemeDict[Theme].BordColor;
+        //} 
 
         #region Focus Methods
 
@@ -528,8 +540,11 @@ namespace Jw.Winform.Ctrls
 
         protected override void OnEnter(EventArgs e)
         {
-            isHovered = true;
-            Refresh();
+            if (this.Created)
+            {
+                isHovered = true;
+                Refresh();
+            }
 
             base.OnEnter(e);
         }

@@ -7,121 +7,88 @@ using System.Threading.Tasks;
 
 namespace Jw.Winform.Ctrls
 {
-    public static class JwIconTheme
+    public class JwIconThemeStatus
     {
-        public static Dictionary<ThemeType, JwIconThemeItem> ThemeDict = new Dictionary<ThemeType, JwIconThemeItem>();
-        static JwIconTheme()
+        public JwIconThemeInfo Normal;
+        public JwIconThemeInfo Active;
+        public JwIconThemeInfo Disable;
+
+        public JwIconThemeStatus Clone()
         {
-            ThemeDict.Add(ThemeType.primary, new JwIconThemeItem()
-            {
-                BackColor = ColorTranslator.FromHtml("#007bff"),
-                ForeColor = ColorTranslator.FromHtml("#ffffff"),
-                BordColor = ColorTranslator.FromHtml("#007bff"),
-                BackActiveColor = ColorTranslator.FromHtml("#0069d9"),
-                ForeActiveColor = ColorTranslator.FromHtml("#ffffff"),
-                BordActiveColor = ColorTranslator.FromHtml("#0062cc"),
-                BackDisableColor = ColorTranslator.FromHtml("#007bff"),
-                ForeDisableColor = ColorTranslator.FromHtml("#ffffff"),
-                BordDisableColor = ColorTranslator.FromHtml("#007bff")
-            });
-            ThemeDict.Add(ThemeType.secondary, new JwIconThemeItem()
-            {
-                BackColor = ColorTranslator.FromHtml("#6c757d"),
-                ForeColor = ColorTranslator.FromHtml("#ffffff"),
-                BordColor = ColorTranslator.FromHtml("#6c757d"),
-                BackActiveColor = ColorTranslator.FromHtml("#5a6268"),
-                ForeActiveColor = ColorTranslator.FromHtml("#ffffff"),
-                BordActiveColor = ColorTranslator.FromHtml("#545b62"),
-                BackDisableColor = ColorTranslator.FromHtml("#6c757d"),
-                ForeDisableColor = ColorTranslator.FromHtml("#ffffff"),
-                BordDisableColor = ColorTranslator.FromHtml("#6c757d")
-            });
-            ThemeDict.Add(ThemeType.success, new JwIconThemeItem()
-            {
-                BackColor = ColorTranslator.FromHtml("#28a745"),
-                ForeColor = ColorTranslator.FromHtml("#ffffff"),
-                BordColor = ColorTranslator.FromHtml("#28a745"),
-                BackActiveColor = ColorTranslator.FromHtml("#218838"),
-                ForeActiveColor = ColorTranslator.FromHtml("#ffffff"),
-                BordActiveColor = ColorTranslator.FromHtml("#1e7e34"),
-                BackDisableColor = ColorTranslator.FromHtml("#28a745"),
-                ForeDisableColor = ColorTranslator.FromHtml("#ffffff"),
-                BordDisableColor = ColorTranslator.FromHtml("#28a745")
-            });
-            ThemeDict.Add(ThemeType.danger, new JwIconThemeItem()
-            {
-                BackColor = ColorTranslator.FromHtml("#dc3545"),
-                ForeColor = ColorTranslator.FromHtml("#ffffff"),
-                BordColor = ColorTranslator.FromHtml("#dc3545"),
-                BackActiveColor = ColorTranslator.FromHtml("#c82333"),
-                ForeActiveColor = ColorTranslator.FromHtml("#ffffff"),
-                BordActiveColor = ColorTranslator.FromHtml("#bd2130"),
-                BackDisableColor = ColorTranslator.FromHtml("#dc3545"),
-                ForeDisableColor = ColorTranslator.FromHtml("#ffffff"),
-                BordDisableColor = ColorTranslator.FromHtml("#dc3545")
-            });
-            ThemeDict.Add(ThemeType.info, new JwIconThemeItem()
-            {
-                BackColor = ColorTranslator.FromHtml("#17a2b8"),
-                ForeColor = ColorTranslator.FromHtml("#ffffff"),
-                BordColor = ColorTranslator.FromHtml("#17a2b8"),
-                BackActiveColor = ColorTranslator.FromHtml("#138496"),
-                ForeActiveColor = ColorTranslator.FromHtml("#ffffff"),
-                BordActiveColor = ColorTranslator.FromHtml("#117a8b"),
-                BackDisableColor = ColorTranslator.FromHtml("#17a2b8"),
-                ForeDisableColor = ColorTranslator.FromHtml("#ffffff"),
-                BordDisableColor = ColorTranslator.FromHtml("#17a2b8")
-            });
-            ThemeDict.Add(ThemeType.warning, new JwIconThemeItem()
-            {
-                BackColor = ColorTranslator.FromHtml("#ffc107"),
-                ForeColor = ColorTranslator.FromHtml("#212529"),
-                BordColor = ColorTranslator.FromHtml("#ffc107"),
-                BackActiveColor = ColorTranslator.FromHtml("#e0a800"),
-                ForeActiveColor = ColorTranslator.FromHtml("#212529"),
-                BordActiveColor = ColorTranslator.FromHtml("#d39e00"),
-                BackDisableColor = ColorTranslator.FromHtml("#ffc107"),
-                ForeDisableColor = ColorTranslator.FromHtml("#212529"),
-                BordDisableColor = ColorTranslator.FromHtml("#ffc107")
-            });
-            ThemeDict.Add(ThemeType.light, new JwIconThemeItem()
-            {
-                BackColor = ColorTranslator.FromHtml("#f8f9fa"),
-                ForeColor = ColorTranslator.FromHtml("#212529"),
-                BordColor = ColorTranslator.FromHtml("#dae0e5"),
-                BackActiveColor = ColorTranslator.FromHtml("#e2e6ea"),
-                ForeActiveColor = ColorTranslator.FromHtml("#212529"),
-                BordActiveColor = ColorTranslator.FromHtml("#dae0e5"),
-                BackDisableColor = ColorTranslator.FromHtml("#f8f9fa"),
-                ForeDisableColor = ColorTranslator.FromHtml("#212529"),
-                BordDisableColor = ColorTranslator.FromHtml("#f8f9fa")
-            });
-            ThemeDict.Add(ThemeType.dark, new JwIconThemeItem()
-            {
-                BackColor = ColorTranslator.FromHtml("#343a40"),
-                ForeColor = ColorTranslator.FromHtml("#ffffff"),
-                BordColor = ColorTranslator.FromHtml("#343a40"),
-                BackActiveColor = ColorTranslator.FromHtml("#23272b"),
-                ForeActiveColor = ColorTranslator.FromHtml("#ffffff"),
-                BordActiveColor = ColorTranslator.FromHtml("#1d2124"),
-                BackDisableColor = ColorTranslator.FromHtml("#343a40"),
-                ForeDisableColor = ColorTranslator.FromHtml("#ffffff"),
-                BordDisableColor = ColorTranslator.FromHtml("#343a40")
-            });
+            var r = new JwIconThemeStatus();
+            r.Normal = Normal.Clone();
+            r.Active = Active.Clone();
+            r.Disable = Disable.Clone();
+            return r;
         }
     }
-    public class JwIconThemeItem
+    public class JwIconThemeInfo
     {
-        public Color BackColor { get; set; }
-        public Color ForeColor { get; set; }
-        public Color BordColor { get; set; }
-
-        public Color BackActiveColor { get; set; }
-        public Color ForeActiveColor { get; set; }
-        public Color BordActiveColor { get; set; }
-
-        public Color BackDisableColor { get; set; }
-        public Color ForeDisableColor { get; set; }
-        public Color BordDisableColor { get; set; }
+        public Color Back;
+        public Color Border;
+        public Color Fore;
+        public JwIconThemeInfo Clone()
+        {
+            var r = new JwIconThemeInfo();
+            r.Back = this.Back;
+            r.Border = this.Border;
+            r.Fore = this.Fore;
+            return r;
+        }
+    }
+    public static class JwIconTheme
+    {
+        public static Dictionary<ThemeType, JwIconThemeStatus> ThemeDict = new Dictionary<ThemeType, JwIconThemeStatus>();
+        static JwIconTheme()
+        {
+            ThemeDict.Add(ThemeType.Primary, new JwIconThemeStatus()
+            {
+                Normal = new JwIconThemeInfo() { Back= "#007bff".HexToColor(), Border="#007bff".HexToColor(), Fore="#ffffff".HexToColor()},
+                Active = new JwIconThemeInfo() { Back = "#0069d9".HexToColor(), Border = "#0062cc".HexToColor(), Fore = "#ffffff".HexToColor() },
+                Disable = new JwIconThemeInfo() { Back = "#007bff".HexToColor(), Border = "#007bff".HexToColor(), Fore = "#ffffff".HexToColor() },
+            });
+            ThemeDict.Add(ThemeType.Secondary, new JwIconThemeStatus()
+            {
+                Normal = new JwIconThemeInfo() { Back = "#6c757d".HexToColor(), Border = "#6c757d".HexToColor(), Fore = "#ffffff".HexToColor() },
+                Active = new JwIconThemeInfo() { Back = "#5a6268".HexToColor(), Border = "#545b62".HexToColor(), Fore = "#ffffff".HexToColor() },
+                Disable = new JwIconThemeInfo() { Back = "#6c757d".HexToColor(), Border = "#6c757d".HexToColor(), Fore = "#ffffff".HexToColor() },
+            });
+            ThemeDict.Add(ThemeType.Success, new JwIconThemeStatus()
+            {
+                Normal = new JwIconThemeInfo() { Back = "#28a745".HexToColor(), Border = "#28a745".HexToColor(), Fore = "#ffffff".HexToColor() },
+                Active = new JwIconThemeInfo() { Back = "#218838".HexToColor(), Border = "#1e7e34".HexToColor(), Fore = "#ffffff".HexToColor() },
+                Disable = new JwIconThemeInfo() { Back = "#28a745".HexToColor(), Border = "#28a745".HexToColor(), Fore = "#ffffff".HexToColor() },
+            });
+            ThemeDict.Add(ThemeType.Danger, new JwIconThemeStatus()
+            {
+                Normal = new JwIconThemeInfo() { Back = "#dc3545".HexToColor(), Border = "#dc3545".HexToColor(), Fore = "#ffffff".HexToColor() },
+                Active = new JwIconThemeInfo() { Back = "#c82333".HexToColor(), Border = "#bd2130".HexToColor(), Fore = "#ffffff".HexToColor() },
+                Disable = new JwIconThemeInfo() { Back = "#dc3545".HexToColor(), Border = "#dc3545".HexToColor(), Fore = "#ffffff".HexToColor() },
+            });
+            ThemeDict.Add(ThemeType.Info, new JwIconThemeStatus()
+            {
+                Normal = new JwIconThemeInfo() { Back = "#17a2b8".HexToColor(), Border = "#17a2b8".HexToColor(), Fore = "#ffffff".HexToColor() },
+                Active = new JwIconThemeInfo() { Back = "#138496".HexToColor(), Border = "#117a8b".HexToColor(), Fore = "#ffffff".HexToColor() },
+                Disable = new JwIconThemeInfo() { Back = "#17a2b8".HexToColor(), Border = "#17a2b8".HexToColor(), Fore = "#ffffff".HexToColor() },
+            });
+            ThemeDict.Add(ThemeType.Warning, new JwIconThemeStatus()
+            {
+                Normal = new JwIconThemeInfo() { Back = "#ffc107".HexToColor(), Border = "#ffc107".HexToColor(), Fore = "#212529".HexToColor() },
+                Active = new JwIconThemeInfo() { Back = "#e0a800".HexToColor(), Border = "#d39e00".HexToColor(), Fore = "#212529".HexToColor() },
+                Disable = new JwIconThemeInfo() { Back = "#ffc107".HexToColor(), Border = "#ffc107".HexToColor(), Fore = "#212529".HexToColor() },
+            });
+            ThemeDict.Add(ThemeType.Light, new JwIconThemeStatus()
+            {
+                Normal = new JwIconThemeInfo() { Back = "#f8f9fa".HexToColor(), Border = "#dae0e5".HexToColor(), Fore = "#212529".HexToColor() },
+                Active = new JwIconThemeInfo() { Back = "#e2e6ea".HexToColor(), Border = "#dae0e5".HexToColor(), Fore = "#212529".HexToColor() },
+                Disable = new JwIconThemeInfo() { Back = "#f8f9fa".HexToColor(), Border = "#f8f9fa".HexToColor(), Fore = "#212529".HexToColor() },
+            });
+            ThemeDict.Add(ThemeType.Dark, new JwIconThemeStatus()
+            {
+                Normal = new JwIconThemeInfo() { Back = "#343a40".HexToColor(), Border = "#343a40".HexToColor(), Fore = "#ffffff".HexToColor() },
+                Active = new JwIconThemeInfo() { Back = "#23272b".HexToColor(), Border = "#1d2124".HexToColor(), Fore = "#ffffff".HexToColor() },
+                Disable = new JwIconThemeInfo() { Back = "#343a40".HexToColor(), Border = "#343a40".HexToColor(), Fore = "#ffffff".HexToColor() },
+            });
+        }
     }
 }

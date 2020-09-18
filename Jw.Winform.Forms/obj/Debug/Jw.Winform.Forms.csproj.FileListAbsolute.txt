@@ -1,0 +1,17 @@
+D:\GitHub\Jw\Jw.Winform.Forms\obj\Debug\Jw.Winform.Forms.csprojAssemblyReference.cache
+D:\GitHub\Jw\Jw.Winform.Forms\obj\Debug\Jw.Winform.Forms.JwNotifyForm.resources
+D:\GitHub\Jw\Jw.Winform.Forms\obj\Debug\Jw.Winform.Forms.JwAlertForm.resources
+D:\GitHub\Jw\Jw.Winform.Forms\obj\Debug\Jw.Winform.Forms.JwConfirmForm.resources
+D:\GitHub\Jw\Jw.Winform.Forms\obj\Debug\Jw.Winform.Forms.JwDialogBase.resources
+D:\GitHub\Jw\Jw.Winform.Forms\obj\Debug\Jw.Winform.Forms.FwProgress.resources
+D:\GitHub\Jw\Jw.Winform.Forms\obj\Debug\Jw.Winform.Forms.csproj.GenerateResource.cache
+D:\GitHub\Jw\Jw.Winform.Forms\obj\Debug\Jw.Winform.Forms.csproj.CoreCompileInputs.cache
+D:\GitHub\Jw\Jw.Winform.Forms\bin\Debug\Jw.Winform.Forms.dll
+D:\GitHub\Jw\Jw.Winform.Forms\bin\Debug\Jw.Winform.Forms.pdb
+D:\GitHub\Jw\Jw.Winform.Forms\bin\Debug\Jw.Share.dll
+D:\GitHub\Jw\Jw.Winform.Forms\bin\Debug\Jw.Winform.Ctrls.dll
+D:\GitHub\Jw\Jw.Winform.Forms\bin\Debug\Jw.Share.pdb
+D:\GitHub\Jw\Jw.Winform.Forms\bin\Debug\Jw.Winform.Ctrls.pdb
+D:\GitHub\Jw\Jw.Winform.Forms\obj\Debug\Jw.Winform.Forms.csproj.CopyComplete
+D:\GitHub\Jw\Jw.Winform.Forms\obj\Debug\Jw.Winform.Forms.dll
+D:\GitHub\Jw\Jw.Winform.Forms\obj\Debug\Jw.Winform.Forms.pdb

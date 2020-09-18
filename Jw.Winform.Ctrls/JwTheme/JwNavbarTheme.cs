@@ -11,7 +11,14 @@ namespace Jw.Winform.Ctrls
     {
         public JwNavbarThemeInfo Normal;
         public JwNavbarThemeInfo Active;
-        //public JwNavbarThemeInfo Disable;
+
+        public JwNavbarThemeStatus Clone()
+        {
+            var r = new JwNavbarThemeStatus();
+            r.Normal = Normal.Clone();
+            r.Active = Active.Clone();
+            return r;
+        }
     }
 
     public class JwNavbarThemeInfo
@@ -24,15 +31,19 @@ namespace Jw.Winform.Ctrls
         public Color ChildNodeIcon;
         public Color ChildNodeFore;
         public Color ChildNodeBorder;
-
-        public String BackHex { set { Back = value.HexToColor(); } }
-        public String TopNodeBackHex { set { TopNodeBack = value.HexToColor(); } }
-        public String TopNodeForeHex { set { TopNodeFore = value.HexToColor(); } }
-        public String TopNodeBorderHex { set { TopNodeBorder = value.HexToColor(); } }
-        public String ClildNodeBackHex { set { ClildNodeBack = value.HexToColor(); } }
-        public String ChildNodeIconHex { set { ChildNodeIcon = value.HexToColor(); } }
-        public String ChildNodeForeHex { set { ChildNodeFore = value.HexToColor(); } }
-        public String ChildNodeBorderHex { set { ChildNodeBorder = value.HexToColor(); } }
+        public JwNavbarThemeInfo Clone()
+        {
+            var r = new JwNavbarThemeInfo();
+            r.Back = this.Back;
+            r.TopNodeBack = this.TopNodeBack;
+            r.TopNodeFore = this.TopNodeFore;
+            r.TopNodeBorder = this.TopNodeBorder;
+            r.ClildNodeBack = this.ClildNodeBack;
+            r.ChildNodeIcon = this.ChildNodeIcon;
+            r.ChildNodeFore = this.ChildNodeFore;
+            r.ChildNodeBorder = this.ChildNodeBorder;
+            return r;
+        }
     }
 
     public class JwNavbarTheme
@@ -41,173 +52,125 @@ namespace Jw.Winform.Ctrls
 
         static JwNavbarTheme()
         {
-            ThemeDict.Add(ThemeType.dark, new JwNavbarThemeStatus()
+            ThemeDict.Add(ThemeType.Dark, new JwNavbarThemeStatus()
             {
                 Normal = new JwNavbarThemeInfo()
                 {
-                    BackHex = "#282828",
-                    TopNodeBackHex = "#282828", TopNodeBorderHex = "#232323", TopNodeForeHex = "#999999",
-                    ClildNodeBackHex = "#eeeeee", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
+                    Back = "#282828".HexToColor(),
+                    TopNodeBack = "#282828".HexToColor(), TopNodeBorder = "#232323".HexToColor(), TopNodeFore = "#999999".HexToColor(),
+                    ClildNodeBack = "#eeeeee".HexToColor(), ChildNodeIcon = "#bebebe".HexToColor(), ChildNodeFore = "#333333".HexToColor(), ChildNodeBorder = "#dddddd".HexToColor(),
                 },
                 Active = new JwNavbarThemeInfo()
                 {
-                    BackHex = "#282828",
-                    TopNodeBackHex = "#282828", TopNodeBorderHex = "#232323", TopNodeForeHex = "#ffffff",
-                    ClildNodeBackHex = "#ffffff", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
+                    Back = "#282828".HexToColor(),
+                    TopNodeBack = "#282828".HexToColor(), TopNodeBorder = "#232323".HexToColor(), TopNodeFore = "#ffffff".HexToColor(),
+                    ClildNodeBack = "#ffffff".HexToColor(), ChildNodeIcon = "#bebebe".HexToColor(), ChildNodeFore = "#333333".HexToColor(), ChildNodeBorder = "#dddddd".HexToColor(),
                 },
-                //Disable = new JwNavbarThemeInfo()
-                //{
-                //    BackHex = "#282828",
-                //    TopNodeBackHex = "#282828", TopNodeBorderHex = "#232323", TopNodeForeHex = "#999999",
-                //    ClildNodeBackHex = "#eeeeee", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
-                //},
             });
-            ThemeDict.Add(ThemeType.primary, new JwNavbarThemeStatus()
+            ThemeDict.Add(ThemeType.Primary, new JwNavbarThemeStatus()
             {
                 Normal = new JwNavbarThemeInfo()
                 {
-                    BackHex = "#282828",
-                    TopNodeBackHex = "#0866c6", TopNodeBorderHex = "#232323", TopNodeForeHex = "#ffffff",
-                    ClildNodeBackHex = "#eeeeee", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
+                    Back = "#282828".HexToColor(),
+                    TopNodeBack = "#0866c6".HexToColor(), TopNodeBorder = "#232323".HexToColor(), TopNodeFore = "#ffffff".HexToColor(),
+                    ClildNodeBack = "#eeeeee".HexToColor(), ChildNodeIcon = "#bebebe".HexToColor(), ChildNodeFore = "#333333".HexToColor(), ChildNodeBorder = "#dddddd".HexToColor(),
                 },
                 Active = new JwNavbarThemeInfo()
                 {
-                    BackHex = "#282828",
-                    TopNodeBackHex = "#0866c6", TopNodeBorderHex = "#232323", TopNodeForeHex = "#ffffff", 
-                    ClildNodeBackHex = "#ffffff", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
+                    Back = "#282828".HexToColor(),
+                    TopNodeBack = "#0866c6".HexToColor(), TopNodeBorder = "#232323".HexToColor(), TopNodeFore = "#ffffff".HexToColor(), 
+                    ClildNodeBack = "#ffffff".HexToColor(), ChildNodeIcon = "#bebebe".HexToColor(), ChildNodeFore = "#333333".HexToColor(), ChildNodeBorder = "#dddddd".HexToColor(),
                 },
-                //Disable = new JwNavbarThemeInfo()
-                //{
-                //    BackHex = "#282828",
-                //    TopNodeBackHex = "#282828", TopNodeBorderHex = "#232323", TopNodeForeHex = "#999999", 
-                //    ClildNodeBackHex = "#eeeeee", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
-                //},
             });
-            ThemeDict.Add(ThemeType.secondary, new JwNavbarThemeStatus()
+            ThemeDict.Add(ThemeType.Secondary, new JwNavbarThemeStatus()
             {
                 Normal = new JwNavbarThemeInfo()
                 {
-                    BackHex = "#282828",
-                    TopNodeBackHex   = "#6c757d", TopNodeBorderHex = "#232323", TopNodeForeHex   = "#ffffff",
-                    ClildNodeBackHex = "#eeeeee", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
+                    Back = "#282828".HexToColor(),
+                    TopNodeBack   = "#6c757d".HexToColor(), TopNodeBorder = "#232323".HexToColor(), TopNodeFore   = "#ffffff".HexToColor(),
+                    ClildNodeBack = "#eeeeee".HexToColor(), ChildNodeIcon = "#bebebe".HexToColor(), ChildNodeFore = "#333333".HexToColor(), ChildNodeBorder = "#dddddd".HexToColor(),
                 },
                 Active = new JwNavbarThemeInfo()
                 {
-                    BackHex = "#282828",
-                    TopNodeBackHex   = "#6c757d", TopNodeBorderHex = "#232323", TopNodeForeHex   = "#ffffff",
-                    ClildNodeBackHex = "#ffffff", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
+                    Back = "#282828".HexToColor(),
+                    TopNodeBack   = "#6c757d".HexToColor(), TopNodeBorder = "#232323".HexToColor(), TopNodeFore   = "#ffffff".HexToColor(),
+                    ClildNodeBack = "#ffffff".HexToColor(), ChildNodeIcon = "#bebebe".HexToColor(), ChildNodeFore = "#333333".HexToColor(), ChildNodeBorder = "#dddddd".HexToColor(),
                 },
-                //Disable = new JwNavbarThemeInfo()
-                //{
-                //    BackHex = "#282828",
-                //    TopNodeBackHex   = "#282828", TopNodeBorderHex = "#232323", TopNodeForeHex   = "#999999",
-                //    ClildNodeBackHex = "#eeeeee", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
-                //},
             });
-            ThemeDict.Add(ThemeType.success, new JwNavbarThemeStatus()
+            ThemeDict.Add(ThemeType.Success, new JwNavbarThemeStatus()
             {
                 Normal = new JwNavbarThemeInfo()
                 {
-                    BackHex = "#282828",
-                    TopNodeBackHex   = "#1e7e34", TopNodeBorderHex = "#232323", TopNodeForeHex   = "#ffffff",
-                    ClildNodeBackHex = "#eeeeee", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
+                    Back = "#282828".HexToColor(),
+                    TopNodeBack   = "#1e7e34".HexToColor(), TopNodeBorder = "#232323".HexToColor(), TopNodeFore   = "#ffffff".HexToColor(),
+                    ClildNodeBack = "#eeeeee".HexToColor(), ChildNodeIcon = "#bebebe".HexToColor(), ChildNodeFore = "#333333".HexToColor(), ChildNodeBorder = "#dddddd".HexToColor(),
                 },
                 Active = new JwNavbarThemeInfo()
                 {
-                    BackHex = "#282828",
-                    TopNodeBackHex   = "#1e7e34", TopNodeBorderHex = "#232323", TopNodeForeHex   = "#ffffff",
-                    ClildNodeBackHex = "#ffffff", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
+                    Back = "#282828".HexToColor(),
+                    TopNodeBack   = "#1e7e34".HexToColor(), TopNodeBorder = "#232323".HexToColor(), TopNodeFore   = "#ffffff".HexToColor(),
+                    ClildNodeBack = "#ffffff".HexToColor(), ChildNodeIcon = "#bebebe".HexToColor(), ChildNodeFore = "#333333".HexToColor(), ChildNodeBorder = "#dddddd".HexToColor(),
                 },
-                //Disable = new JwNavbarThemeInfo()
-                //{
-                //    BackHex = "#282828",
-                //    TopNodeBackHex   = "#282828", TopNodeBorderHex = "#232323", TopNodeForeHex   = "#999999",
-                //    ClildNodeBackHex = "#eeeeee", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
-                //},
             });
-            ThemeDict.Add(ThemeType.danger, new JwNavbarThemeStatus()
+            ThemeDict.Add(ThemeType.Danger, new JwNavbarThemeStatus()
             {
                 Normal = new JwNavbarThemeInfo()
                 {
-                    BackHex = "#282828",
-                    TopNodeBackHex   = "#bd2130", TopNodeBorderHex = "#232323", TopNodeForeHex   = "#ffffff",
-                    ClildNodeBackHex = "#eeeeee", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
+                    Back = "#282828".HexToColor(),
+                    TopNodeBack   = "#bd2130".HexToColor(), TopNodeBorder = "#232323".HexToColor(), TopNodeFore   = "#ffffff".HexToColor(),
+                    ClildNodeBack = "#eeeeee".HexToColor(), ChildNodeIcon = "#bebebe".HexToColor(), ChildNodeFore = "#333333".HexToColor(), ChildNodeBorder = "#dddddd".HexToColor(),
                 },
                 Active = new JwNavbarThemeInfo()
                 {
-                    BackHex = "#282828",
-                    TopNodeBackHex   = "#bd2130", TopNodeBorderHex = "#232323", TopNodeForeHex   = "#ffffff",
-                    ClildNodeBackHex = "#ffffff", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
+                    Back = "#282828".HexToColor(),
+                    TopNodeBack   = "#bd2130".HexToColor(), TopNodeBorder = "#232323".HexToColor(), TopNodeFore   = "#ffffff".HexToColor(),
+                    ClildNodeBack = "#ffffff".HexToColor(), ChildNodeIcon = "#bebebe".HexToColor(), ChildNodeFore = "#333333".HexToColor(), ChildNodeBorder = "#dddddd".HexToColor(),
                 },
-                //Disable = new JwNavbarThemeInfo()
-                //{
-                //    BackHex = "#282828",
-                //    TopNodeBackHex   = "#282828", TopNodeBorderHex = "#232323", TopNodeForeHex   = "#999999",
-                //    ClildNodeBackHex = "#eeeeee", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
-                //},
             });
-            ThemeDict.Add(ThemeType.warning, new JwNavbarThemeStatus()
+            ThemeDict.Add(ThemeType.Warning, new JwNavbarThemeStatus()
             {
                 Normal = new JwNavbarThemeInfo()
                 {
-                    BackHex = "#282828",
-                    TopNodeBackHex   = "#d39e00", TopNodeBorderHex = "#232323", TopNodeForeHex   = "#212529",
-                    ClildNodeBackHex = "#eeeeee", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
+                    Back = "#282828".HexToColor(),
+                    TopNodeBack   = "#d39e00".HexToColor(), TopNodeBorder = "#232323".HexToColor(), TopNodeFore   = "#212529".HexToColor(),
+                    ClildNodeBack = "#eeeeee".HexToColor(), ChildNodeIcon = "#bebebe".HexToColor(), ChildNodeFore = "#333333".HexToColor(), ChildNodeBorder = "#dddddd".HexToColor(),
                 },
                 Active = new JwNavbarThemeInfo()
                 {
-                    BackHex = "#282828",
-                    TopNodeBackHex   = "#d39e00", TopNodeBorderHex = "#232323", TopNodeForeHex   = "#212529",
-                    ClildNodeBackHex = "#ffffff", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
+                    Back = "#282828".HexToColor(),
+                    TopNodeBack   = "#d39e00".HexToColor(), TopNodeBorder = "#232323".HexToColor(), TopNodeFore   = "#212529".HexToColor(),
+                    ClildNodeBack = "#ffffff".HexToColor(), ChildNodeIcon = "#bebebe".HexToColor(), ChildNodeFore = "#333333".HexToColor(), ChildNodeBorder = "#dddddd".HexToColor(),
                 },
-                //Disable = new JwNavbarThemeInfo()
-                //{
-                //    BackHex = "#282828",
-                //    TopNodeBackHex   = "#282828", TopNodeBorderHex = "#232323", TopNodeForeHex   = "#999999",
-                //    ClildNodeBackHex = "#eeeeee", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
-                //},
             });
-            ThemeDict.Add(ThemeType.info, new JwNavbarThemeStatus()
+            ThemeDict.Add(ThemeType.Info, new JwNavbarThemeStatus()
             {
                 Normal = new JwNavbarThemeInfo()
                 {
-                    BackHex = "#282828",
-                    TopNodeBackHex   = "#117a8b", TopNodeBorderHex = "#232323", TopNodeForeHex   = "#ffffff",
-                    ClildNodeBackHex = "#eeeeee", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
+                    Back = "#282828".HexToColor(),
+                    TopNodeBack   = "#117a8b".HexToColor(), TopNodeBorder = "#232323".HexToColor(), TopNodeFore   = "#ffffff".HexToColor(),
+                    ClildNodeBack = "#eeeeee".HexToColor(), ChildNodeIcon = "#bebebe".HexToColor(), ChildNodeFore = "#333333".HexToColor(), ChildNodeBorder = "#dddddd".HexToColor(),
                 },
                 Active = new JwNavbarThemeInfo()
                 {
-                    BackHex = "#282828",
-                    TopNodeBackHex   = "#117a8b", TopNodeBorderHex = "#232323", TopNodeForeHex   = "#ffffff",
-                    ClildNodeBackHex = "#ffffff", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
+                    Back = "#282828".HexToColor(),
+                    TopNodeBack   = "#117a8b".HexToColor(), TopNodeBorder = "#232323".HexToColor(), TopNodeFore   = "#ffffff".HexToColor(),
+                    ClildNodeBack = "#ffffff".HexToColor(), ChildNodeIcon = "#bebebe".HexToColor(), ChildNodeFore = "#333333".HexToColor(), ChildNodeBorder = "#dddddd".HexToColor(),
                 },
-                //Disable = new JwNavbarThemeInfo()
-                //{
-                //    BackHex = "#282828",
-                //    TopNodeBackHex   = "#282828", TopNodeBorderHex = "#232323", TopNodeForeHex   = "#999999",
-                //    ClildNodeBackHex = "#eeeeee", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
-                //},
             });
-            ThemeDict.Add(ThemeType.light, new JwNavbarThemeStatus()
+            ThemeDict.Add(ThemeType.Light, new JwNavbarThemeStatus()
             {
                 Normal = new JwNavbarThemeInfo()
                 {
-                    BackHex = "#282828",
-                    TopNodeBackHex   = "#f8f9fa", TopNodeBorderHex = "#232323", TopNodeForeHex   = "#212529",
-                    ClildNodeBackHex = "#eeeeee", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
+                    Back = "#282828".HexToColor(),
+                    TopNodeBack   = "#f8f9fa".HexToColor(), TopNodeBorder = "#232323".HexToColor(), TopNodeFore   = "#212529".HexToColor(),
+                    ClildNodeBack = "#eeeeee".HexToColor(), ChildNodeIcon = "#bebebe".HexToColor(), ChildNodeFore = "#333333".HexToColor(), ChildNodeBorder = "#dddddd".HexToColor(),
                 },
                 Active = new JwNavbarThemeInfo()
                 {
-                    BackHex = "#282828",
-                    TopNodeBackHex   = "#f8f9fa", TopNodeBorderHex = "#232323", TopNodeForeHex   = "#212529",
-                    ClildNodeBackHex = "#ffffff", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
+                    Back = "#282828".HexToColor(),
+                    TopNodeBack   = "#f8f9fa".HexToColor(), TopNodeBorder = "#232323".HexToColor(), TopNodeFore   = "#212529".HexToColor(),
+                    ClildNodeBack = "#ffffff".HexToColor(), ChildNodeIcon = "#bebebe".HexToColor(), ChildNodeFore = "#333333".HexToColor(), ChildNodeBorder = "#dddddd".HexToColor(),
                 },
-                //Disable = new JwNavbarThemeInfo()
-                //{
-                //    BackHex = "#282828",
-                //    TopNodeBackHex   = "#282828", TopNodeBorderHex = "#232323", TopNodeForeHex   = "#999999",
-                //    ClildNodeBackHex = "#eeeeee", ChildNodeIconHex = "#bebebe", ChildNodeForeHex = "#333333", ChildNodeBorderHex = "#dddddd",
-                //},
             });
         }
     }

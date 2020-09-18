@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("Jw.Winform.Ctrls")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Jw UI Labrary for .NET WinForms")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Jw.Winform.Ctrls")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyCompany("Wuqinchao")]
+[assembly: AssemblyProduct("JwFramework")]
+[assembly: AssemblyCopyright("Copyright © 2020 Wuqinchao. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -1,31 +1,81 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Jw.Winform.Ctrls
 {
-    public class JwNavBarNode : TreeNode
+    public class JwNavbarNode : TreeNode
     {
-        private string _Icon;
-        public string Icon
+        private string _Key = string.Empty;
+
+        public string Key { get => _Key; set => _Key = value; }
+        public JwNavbarNode():base()
+        { }
+        public JwNavbarNode(string text) : base(text)
         {
-            get => _Icon;
-            set
+        }
+        public JwNavbarNode(string text, string key) : base(text)
+        {
+            _Key = key;
+        }
+        public JwNavbarNode(string text, string key, TreeNode[] children) : base(text, children)
+        {
+            _Key = key;
+        }
+    }
+
+    public static class JwNavbarNodeExtensions
+    {
+        public static bool MoveUp(this TreeNode node)
+        {
+            TreeNode parent = node.Parent;
+            TreeView view = node.TreeView;
+            if (parent != null)
             {
-                _Icon = value;
-                TreeView.Refresh();
+                int index = parent.Nodes.IndexOf(node);
+                if (index > 0)
+                {
+                    parent.Nodes.RemoveAt(index);
+                    parent.Nodes.Insert(index - 1, node);
+                    return true;
+                }
             }
+            else if (node.TreeView.Nodes.Contains(node)) //root node
+            {
+                int index = view.Nodes.IndexOf(node);
+                if (index > 0)
+                {
+                    view.Nodes.RemoveAt(index);
+                    view.Nodes.Insert(index - 1, node);
+                    return true;
+                }
+            }
+            return false;
         }
 
-        public bool MouseIn()
+        public static bool MoveDown(this TreeNode node)
         {
-            var test = this.TreeView.HitTest(this.TreeView.PointToClient(TreeView.MousePosition));
-            if (test.Node == null) return false;
-            return this.Equals(test.Node);
+            TreeNode parent = node.Parent;
+            TreeView view = node.TreeView;
+            if (parent != null)
+            {
+                int index = parent.Nodes.IndexOf(node);
+                if (index < parent.Nodes.Count - 1)
+                {
+                    parent.Nodes.RemoveAt(index);
+                    parent.Nodes.Insert(index + 1, node);
+                    return true;
+                }
+            }
+            else if (view != null && view.Nodes.Contains(node)) //root node
+            {
+                int index = view.Nodes.IndexOf(node);
+                if (index < view.Nodes.Count - 1)
+                {
+                    view.Nodes.RemoveAt(index);
+                    view.Nodes.Insert(index + 1, node);
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
